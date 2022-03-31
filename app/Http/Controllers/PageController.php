@@ -18,6 +18,6 @@ class PageController extends Controller
 
     public function getProductDetail()
     {
-        return view('productdetail');
+        return view('detail');
     }
 }
