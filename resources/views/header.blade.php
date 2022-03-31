@@ -17,7 +17,7 @@
                     <div class="col-xl-1"></div>
                     <div class="col-xl-10">
                         <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
-                        <a href="#"><i class="fa-solid fa-user"></i> Login</a>
+                        <a href="login"><i class="fa-solid fa-user"></i> Login</a>
                         <a href="#"><i class="fa-solid fa-heart"></i> Love</a>
                         <a href="#"><i class="fa-solid fa-truck"></i> Tracking</a>
                     </div>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,5 @@ Route::get('detail',[PageController::class, 'getProductDetail']);
 Route::get('login',[PageController::class, 'Login']);
 Route::get('signup',[PageController::class, 'Signup']);
 
-
+Route::get('admin',[AdminController::class, 'getAdmin']);
+Route::get('database',[AdminController::class, 'getTable']);

@@ -28,7 +28,7 @@
                                                 </label>
                                                 </div>
                                             </div>
-                                            <div class="col-12">
+                                            <div class="col-6">
                                                 <button type="submit" class="btn-footer">Sign in</button>
                                             </div>
                                         </form>
