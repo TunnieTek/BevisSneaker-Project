@@ -30,7 +30,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-xl-3">
-                                    <a href="#"><h4>VỀ TRAVATRIX</h4></a>
+                                    <a href="#"><h4>ABOUT TRAVATRIX</h4></a>
                                     <ul>
                                         <li><a href="#">Careers</a></li>
                                         <li><a href="#">About Travatrix</a></li>
