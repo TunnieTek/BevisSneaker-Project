@@ -26,5 +26,7 @@ Route::get('/', function () {
 Route::get('index',[PageController::class, 'getIndex']);
 Route::get('product',[PageController::class, 'getProduct']);
 Route::get('detail',[PageController::class, 'getProductDetail']);
+Route::get('login',[PageController::class, 'Login']);
+Route::get('signup',[PageController::class, 'Signup']);
 
 
