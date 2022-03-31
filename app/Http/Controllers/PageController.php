@@ -15,4 +15,9 @@ class PageController extends Controller
     {
         return view('product');
     }
+
+    public function getProductDetail()
+    {
+        return view('productdetail');
+    }
 }

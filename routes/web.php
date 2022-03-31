@@ -25,5 +25,6 @@ Route::get('/', function () {
 
 Route::get('index',[PageController::class, 'getIndex']);
 Route::get('product',[PageController::class, 'getProduct']);
+Route::get('product/detail',[PageController::class, 'getProductDetail']);
 
 
