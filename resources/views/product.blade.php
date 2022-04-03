@@ -98,7 +98,8 @@
                                                 <img src="{{'BevisSneaker'}}/images/Product-Single/2.png" style="width: 100%; border-radius: 5px;" >
                                             </div>
                                             <button class="btnBuy">BUY NOW!</button>
-                                            <h4 style="text-align: center;">STAN SMITH</h4>
+                                            <hr style="border: 1px dashed white;">
+                                            <h4 style="text-align: center;"><a href="#">STAN SMITH</a></h4>
                                             <hr style="border: 1px dashed white;">
                                             <h5 style="text-align: center; color: #ff5f17;">$500</h5>
                                         </div>
