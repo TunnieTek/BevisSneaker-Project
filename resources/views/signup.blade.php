@@ -15,19 +15,19 @@
                                     <div class="col-xl-6">
                                         <h1>SIGN UP</h1>
                                         <form class="row g-3">
-                                            <div class="col-md-6">
+                                            <div class="col-12">
                                                 <label for="inputUsername" class="form-label">Username</label>
                                                 <input type="text" class="form-control" id="inputUsername">
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-12">
                                                 <label for="inputPassword4" class="form-label">Password</label>
                                                 <input type="password" class="form-control" id="inputPassword4">
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-12">
                                                 <label for="inputFullname" class="form-label">Full Name</label>
                                                 <input type="text" class="form-control" id="Fullname" placeholder="Tan Yin Ern">
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-12">
                                                 <label for="inputPhoneNumber" class="form-label">Phone Number</label>
                                                 <input type="text" class="form-control" id="Fullname" placeholder="+84">
                                             </div>

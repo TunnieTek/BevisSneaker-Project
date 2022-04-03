@@ -28,6 +28,11 @@
                                                 </label>
                                                 </div>
                                             </div>
+                                            <div class="col-12">
+                                                <label>
+                                                    <a href="signup">Create an account</a>
+                                                </label>
+                                            </div>
                                             <div class="col-6">
                                                 <button type="submit" class="btn-footer">Sign in</button>
                                             </div>
