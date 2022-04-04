@@ -73,8 +73,18 @@
                                 </table>
                             </form>
                             <hr style="border: 2px dashed white;">
-                            <button class="btn-footer">MUA NGAY</button>
+                            <button class="btn-footer" onclick="addCart()">MUA NGAY</button>
                         </div>
+
+                        {{-- JS --}}
+                        <script>
+                            function addCart()
+                                {
+                                     location.assign("cart")
+                                }
+                        </script>
+                        {{-- JS --}}
+
                     </div>
                     <div class="col-xl-3"></div>
 

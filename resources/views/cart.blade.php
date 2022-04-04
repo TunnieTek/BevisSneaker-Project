@@ -1,7 +1,7 @@
 @include('header')
 @yield('cart')
         <!-- START CART -->
-        <div class="cart">
+        <div class="cart" style="font-family: 'URW Geometric';">
             <div class="pb-5">
                 <div class="container">
                 <div class="row">
@@ -57,7 +57,7 @@
                         <div class="input-group mb-4 border rounded-pill p-2">
                         <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
                         <div class="input-group-append border-0">
-                            <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Apply coupon</button>
+                            <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i> Apply coupon</button>
                         </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                             <h5 class="font-weight-bold">$89.00</h5>
                         </li>
-                        </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+                        </ul><a href="#" class="btn-footer" style="padding: 1.5%; font-family: 'URW Geometric';">PROCCEED TO CHECKOUT</a>
                     </div>
                     </div>
                 </div>
