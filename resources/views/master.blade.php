@@ -24,7 +24,7 @@
                             <div class="content--banner-01">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xl-4">
+                                        <div class="col-xl-4 col-md-4">
                                             <h1>STAYING POWER</h1>
                                             <p>The legendary Superstar stays creative with new colorways.</p>
                                             <div class="button">
@@ -36,7 +36,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xl-8">
+                                        <div class="col-xl-8 col-md-8">
 
                                         </div>
                                     </div>
@@ -63,7 +63,7 @@
                             <!-- slideshow -->
                             <div class="container-fluid" style="padding: 0;">
                                 <div class="row">
-                                    <div class="col-xl-3">
+                                    <div class="col-sm-3 col-xl-3 col-md-3">
                                         <a href="#">
                                             <div class="card" style="width: 100%; ">
                                                 <img src="{{'BevisSneaker'}}/images/product/adidas-stan/001.jpg" class="card-img-top" >
@@ -75,7 +75,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-xl-3">
+                                    <div class="col-sm-3 col-xl-3 col-md-3">
                                         <a href="#">
                                             <div class="card" style="width: 100%;">
                                                 <img src="{{'BevisSneaker'}}/images/product/adidas-stan/004.jpg" class="card-img-top" >
@@ -92,7 +92,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-xl-3">
+                                    <div class="col-sm-3 col-xl-3 col-md-3">
                                         <a href="#">
                                             <div class="card" style="width: 100%; ">
                                                 <img src="{{'BevisSneaker'}}/images/product/adidas-stan/007.jpg" class="card-img-top" >
@@ -104,7 +104,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-xl-3">
+                                    <div class="col-sm-3 col-xl-3 col-md-3">
                                         <a href="#">
                                             <div class="card" style="width: 100%;">
                                                 <img src="{{'BevisSneaker'}}/images/product/adidas-stan/003.jpg" class="card-img-top" >
@@ -119,7 +119,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2"></div>
+                        <div class="col-xl-2 col-md-2"></div>
                     </div>
                 </div>
             </div>
@@ -130,12 +130,12 @@
             <h2 style="text-align: center; font-family: 'URW Geometric'; padding: 50px;">DISCOVER</h2>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-2"></div>
-                    <div class="col-xl-8">
+                    <div class="col-xl-2 col-md-2"></div>
+                    <div class="col-xl-8 col-md-8">
                         <!-- slideshow -->
                         <div class="container-fluid" style="padding: 0;">
                             <div class="row">
-                                <div class="col-xl-3">
+                                <div class="col-sm-3 col-xl-3 col-md-3">
                                     <a href="#">
                                         <div class="card" style="width: 100%; ">
                                             <img src="{{'BevisSneaker'}}/images/product/ad-01.jpg" class="card-img-top" >
@@ -152,7 +152,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-xl-3">
+                                <div class="col-sm-3 col-xl-3 col-md-3">
                                     <a href="#">
                                         <div class="card" style="width: 100%;">
                                             <img src="{{'BevisSneaker'}}/images/product/ad-02.jpg" class="card-img-top" >
@@ -169,7 +169,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-xl-3">
+                                <div class="col-sm-3 col-xl-3 col-md-3">
                                     <a href="#">
                                         <div class="card" style="width: 100%; ">
                                             <img src="{{'BevisSneaker'}}/images/product/ad-03.jpg" class="card-img-top" >
@@ -186,7 +186,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-xl-3">
+                                <div class="col-sm-3 col-xl-3 col-md-3">
                                     <a href="#">
                                         <div class="card" style="width: 100%;">
                                             <img src="{{'BevisSneaker'}}/images/product/ad-08.jpg" class="card-img-top" >

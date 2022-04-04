@@ -11,14 +11,15 @@
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <h1>LOG IN</h1>
-                                        <form class="row g-3">
+                                        <form class="row g-3" method="POST">
+                                            @csrf
                                             <div class="col-12">
                                                 <label for="inputUsername" class="form-label">Username</label>
-                                                <input type="text" class="form-control" id="inputUsername">
+                                                <input type="text" class="form-control" id="inputUsername" name="user_name">
                                             </div>
                                             <div class="col-12">
                                                 <label for="inputPassword4" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="inputPassword4">
+                                                <input type="password" class="form-control" id="inputPassword4" name="password">
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-check">
@@ -29,11 +30,6 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <label>
-                                                    <a href="signup">Create an account</a>
-                                                </label>
-                                            </div>
-                                            <div class="col-6">
                                                 <button type="submit" class="btn-footer">Sign in</button>
                                             </div>
                                         </form>
