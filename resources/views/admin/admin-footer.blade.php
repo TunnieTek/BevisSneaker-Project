@@ -58,6 +58,21 @@
     <script src="{{'BevisSneaker/admin'}}/js/demo/chart-area-demo.js"></script>
     <script src="{{'BevisSneaker/admin'}}/js/demo/chart-pie-demo.js"></script>
 
+    <script>var myDropdown = document.getElementById('myDropdown')
+myDropdown.addEventListener('show.bs.dropdown', function () {
+  // do something...
+})</script>
+<script>
+    var dropdown = new bootstrap.Dropdown(element, {
+  popperConfig: function (defaultBsPopperConfig) {
+    // var newPopperConfig = {...}
+    // use defaultBsPopperConfig if needed...
+    // return newPopperConfig
+  }
+})
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

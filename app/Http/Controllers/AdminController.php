@@ -15,4 +15,14 @@ class AdminController extends Controller
     {
         return view('admin.admin-table');
     }
+
+    public function getBlank()
+    {
+        return view('admin.admin-blank');
+    }
+
+    public function getProduct()
+    {
+        return view('admin.admin-product');
+    }
 }

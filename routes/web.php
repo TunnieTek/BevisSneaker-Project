@@ -51,6 +51,8 @@ Route::group(['prefix' => 'user'], function()
 
 Route::get('admin',[AdminController::class, 'getAdmin']);
 Route::get('database',[AdminController::class, 'getTable']);
+Route::get('user',[AdminController::class, 'getBlank']) -> name('blank');
+Route::get('adminproduct',[AdminController::class, 'getProduct']) -> name('product');
 
 Route::get('{any}', 'Error@ErrorPage')
     ->where('any', '.*');
