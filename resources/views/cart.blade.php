@@ -34,6 +34,8 @@
                                 <div class="ml-3 d-inline-block align-middle">
                                     <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Stant Smith</a></h5>
                                     <span class="text-muted font-weight-normal font-italic d-block">Category: Sneaker</span>
+                                    <span class="text-muted font-weight-normal font-italic d-block">Color: Red</span>
+                                    <span class="text-muted font-weight-normal font-italic d-block">Size: 38</span>
                                 </div>
                                 </div>
                             </th>

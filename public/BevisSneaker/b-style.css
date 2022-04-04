@@ -557,3 +557,18 @@ td {
 .accordion-body li:hover {
     background-color: #7c7c7c38;
 }
+
+
+/* CART */
+.cart{
+    font-family: 'URW Geometric';
+    padding: 5%;
+}
+
+
+.cart body {
+  background: #eecda3;
+  background: -webkit-linear-gradient(to right, #eecda3, #ef629f);
+  background: linear-gradient(to right, #eecda3, #ef629f);
+  min-height: 100vh;
+}
