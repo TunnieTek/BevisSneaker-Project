@@ -30,4 +30,9 @@ class PageController extends Controller
     {
         return view('signup');
     }
+
+    public function getCart()
+    {
+        return view('cart');
+    }
 }

@@ -28,6 +28,8 @@ Route::get('/', function () {
 Route::get('index',[PageController::class, 'getIndex']) -> name('index');
 Route::get('product',[PageController::class, 'getProduct'])  -> name('product');
 Route::get('detail',[PageController::class, 'getProductDetail'])  -> name('detail');
+Route::get('cart',[PageController::class, 'getCart']) -> name('cart');
+
 // Route::get('login',[loginController::class, 'Login']);
 
 Route::get('homepage',[PageController::class, 'homepage']) -> name('homepage');

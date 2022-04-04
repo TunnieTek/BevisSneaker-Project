@@ -1,5 +1,5 @@
 @include('header')
-@section('title', 'Bevis |Login')
+@section('title', 'Bevis | Login')
 @yield('login')
 <div class="form--login">
             <div class="container-fluid">
