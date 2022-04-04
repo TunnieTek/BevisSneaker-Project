@@ -12,13 +12,13 @@ class loginController extends Controller
     public function getLogin()
     {
         return view('login');
-    }    
+    }
 
-    public function postLogin() 
+    public function postLogin()
     {
         $data = request()->all();
         if (Auth::attempt(['user_name' => $data['user_name'], 'password' => $data['password']])) {
-            return redirect()->route('homepage');
+            return redirect()->route('index');
         } else {
             return redirect()->back();
         }

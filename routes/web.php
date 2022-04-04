@@ -17,7 +17,7 @@ use App\Http\Controllers\listUserController;
 */
 
 Route::get('/', function () {
-    return view('404');
+    return view('master');
 });
 
 // Route::get('index',[
@@ -25,22 +25,23 @@ Route::get('/', function () {
 //     'user'=>'PageController@getIndex'
 // ]);
 
-Route::get('index',[PageController::class, 'getIndex']);
-Route::get('product',[PageController::class, 'getProduct']);
-Route::get('detail',[PageController::class, 'getProductDetail']);
-//Route::get('login',[PageController::class, 'Login']);
+Route::get('index',[PageController::class, 'getIndex']) -> name('index');
+Route::get('product',[PageController::class, 'getProduct'])  -> name('product');
+Route::get('detail',[PageController::class, 'getProductDetail'])  -> name('detail');
+// Route::get('login',[loginController::class, 'Login']);
 
 Route::get('homepage',[PageController::class, 'homepage']) -> name('homepage');
 
 // list all user to view:listuserVan --- Van
 Route::get('listUser', 'getAllUserController@getAllUser') -> name('listUser');
-Route::group(['prefix' => 'user'], function() 
-{
-    Route::get('login', 'loginController@getLogin') -> name('login');; 
-    Route::post('login', 'loginController@postLogin');
-    Route::get('signup','loginController@getSignup') -> name('signup');
-    Route::post('signup','loginController@postSignup');
 
+Route::get('login', 'loginController@getLogin') -> name('login');;
+Route::post('login', 'loginController@postLogin');
+Route::get('signup','loginController@getSignup') -> name('signup');
+Route::post('signup','loginController@postSignup');
+
+Route::group(['prefix' => 'user'], function()
+{
     Route::get('edituser/{user_id}', 'updateUserController@getEditUser') -> name('editUser');
     Route::post('edituser/{user_id}', 'updateUserController@postEditUser');
     Route::get('deleteuser/{user_id}', 'updateUserController@getDeleteUser') -> name('deleteUser');

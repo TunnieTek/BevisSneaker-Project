@@ -30,6 +30,9 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
+                                                <a href="{{route('signup')}}">Create an account</a>
+                                            </div>
+                                            <div class="col-12">
                                                 <button type="submit" class="btn-footer">Sign in</button>
                                             </div>
                                         </form>

@@ -10,20 +10,20 @@
                     <div class="col-xl-3">
                         <hr>
                         <div class="main-pic">
-                            <img src="images/Product-Single/1.png">
+                            <img src="{{'BevisSneaker'}}/images/Product-Single/1.png">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-xl-3">
-                                        <img src="images/Product-Single/1.png" >
+                                        <img src="{{'BevisSneaker'}}/images/Product-Single/1.png" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="images/Product-Single/2.png" >
+                                        <img src="{{'BevisSneaker'}}/images/Product-Single/2.png" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="images/Product-Single/3.png" >
+                                        <img src="{{'BevisSneaker'}}/images/Product-Single/3.png" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="images/Product-Single/4.png" >
+                                        <img src="{{'BevisSneaker'}}/images/Product-Single/4.png" >
                                     </div>
                                 </div>
                             </div>
