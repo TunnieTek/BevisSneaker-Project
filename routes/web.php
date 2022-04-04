@@ -32,3 +32,8 @@ Route::get('signup',[PageController::class, 'Signup']);
 
 Route::get('admin',[AdminController::class, 'getAdmin']);
 Route::get('database',[AdminController::class, 'getTable']);
+
+Route::get('{any}', 'Error@ErrorPage')
+    ->where('any', '.*');
+
+
