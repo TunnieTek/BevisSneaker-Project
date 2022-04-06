@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -14,13 +13,15 @@ class loginController extends Controller
         return view('login');
     }
 
-    public function postLogin()
+    public function postLogin(Request $request)
     {
         $data = request()->all();
-        if (Auth::attempt(['user_name' => $data['user_name'], 'password' => $data['password']])) {
-            return redirect()->route('index');
+        if (Auth::attempt(['username' => $data['username'], 'password' => $data['password']])) {
+            $alertsc='Logged Successfully! Hi, ["username"]';
+            return redirect()->route('index')->with('alertsc',$alertsc);
         } else {
-            return redirect()->back();
+            $alerter='Username or Password Incorrect';
+            return redirect()->back()->with('alerter',$alerter);
         }
     }
 
@@ -32,10 +33,13 @@ class loginController extends Controller
     public function postSignup(Request $request)
     {
         $user = new User;
-        $user->user_name = $request->user_name;
+        $user->username = $request->username;
         $user->password = Hash::make($request->password);
-        $user->user_email = $request->user_email;
-        $user->role = $request->role;
+        $user->email = $request->email;
+        $user->fullname = $request->fullname;
+        $user->phonenumber = $request->phonenumber;
+        $user->address = $request->address;
+        $user->city = $request->city;
         $user->save();
         return redirect()->route('login');
     }

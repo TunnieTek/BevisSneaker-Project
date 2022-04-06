@@ -30,7 +30,7 @@
                                         <tr>
                                             <th><input type="text" name="" id=""></th>
                                             <th><input type="text" name="" id=""></th>
-                                            <th><input type="number" min="10" value="10" name="" id=""></th>
+                                            <th><input type="number" min="0" value="10" name="" id=""></th>
                                             <th><input type="text" name="" id=""></th>
                                             <th><input type="text" name="" id=""></th>
                                             <th><input type="number" value="35" min="35" max="43" name="" id=""></th>
@@ -50,6 +50,7 @@
                                                 </div>
                                             </th>
                                         </tr>
+
                                     </thead>
                                 </table>
                             </div>

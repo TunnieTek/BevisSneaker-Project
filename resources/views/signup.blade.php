@@ -18,15 +18,15 @@
                                             @csrf
                                             <div class="col-md-6">
                                                 <label for="inputUsername" class="form-label">Username</label>
-                                                <input type="text" class="form-control" id="inputUsername" name="user_name">
+                                                <input type="text" class="form-control" id="inputUsername" name="username">
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="inputPassword4" class="form-label">Password</label>
                                                 <input type="password" class="form-control" id="inputPassword4" name="password">
                                             </div>
                                             <div class="col-md-6">
-                                                <label for="inputFullname" class="form-label">Full Name/Role</label>
-                                                <input type="text" class="form-control" id="Fullname" placeholder="Tan Yin Ern" name="role">
+                                                <label for="inputFullname" class="form-label">Full Name</label>
+                                                <input type="text" class="form-control" id="Fullname" placeholder="Tan Yin Ern" name="fullname">
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="inputPhoneNumber" class="form-label">Phone Number</label>
@@ -34,15 +34,15 @@
                                             </div>
                                             <div class="col-12">
                                                 <label for="inputEmail" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="inputEmail4" placeholder="@domain" name="user_email">
+                                                <input type="email" class="form-control" id="inputEmail4" placeholder="@domain" name="email">
                                             </div>
                                             <div class="col-12">
                                                 <label for="inputAddress" class="form-label">Address </label>
-                                                <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
+                                                <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor" name="address">
                                             </div>
                                             <div class="col-12">
                                                 <label for="inputCity" class="form-label">City</label>
-                                                <input type="text" class="form-control" id="inputCity">
+                                                <input type="text" class="form-control" id="inputCity" name="city">
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-check">

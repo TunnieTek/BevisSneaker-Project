@@ -17,7 +17,9 @@
                     <div class="col-xl-1"></div>
                     <div class="col-xl-10">
                         <a href="{{route('cart')}}"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
-                        <a href="{{route('login')}}"><i class="fa-solid fa-user"></i> Login</a>
+                        <a href="{{route('login')}}">
+                            <i class="fa-solid fa-user"></i> Login
+                        </a>
                         <a href="#"><i class="fa-solid fa-heart"></i> Love</a>
                         <a href="#"><i class="fa-solid fa-truck"></i> Tracking</a>
                     </div>
@@ -61,4 +63,30 @@
                 </div>
             </div>
         </header>
+        {{-- @if(session('alertsc'))
+        <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    {{session('alertsc')}}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        @endif --}}
+
+        {{-- @if(session('alertsc'))
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="..." class="rounded me-2" alt="...">
+                <strong class="me-auto">Logged Successfully</strong>
+                <small>02 Seconds</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                @if(session('alertsc'))
+                    {{session('alertsc')}}
+                @endif
+            </div>
+        </div>
+         @endif --}}
         <!-- END HEADER -->

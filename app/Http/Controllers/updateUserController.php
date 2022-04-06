@@ -27,10 +27,10 @@ class updateUserController extends Controller
         return redirect()->route('listUser');
     }
 
-    public function getDeleteUser($user_id)
+    public function getDeleteUser($username)
     {
-        $user = User::find($user_id);
+        $user = User::find($username);
         $user->delete();
-        return redirect()->route('listUser');
+        return redirect()->route('blank');
     }
 }

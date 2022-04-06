@@ -34,26 +34,32 @@ Route::get('cart',[PageController::class, 'getCart']) -> name('cart');
 
 Route::get('homepage',[PageController::class, 'homepage']) -> name('homepage');
 
-// list all user to view:listuserVan --- Van
-Route::get('listUser', 'getAllUserController@getAllUser') -> name('listUser');
+// list all user
+// Route::get('user', [UserController::class, 'getAllUser'])->name('user');
+Route::get('user', 'UserController@getAllUser') ->name('blank');
 
+
+// Delete User
+Route::get('user', 'UserController@getDeleteUser') ->name('blank');
+
+
+// LOGIN/SIGNUP
 Route::get('login', 'loginController@getLogin') -> name('login');;
 Route::post('login', 'loginController@postLogin');
 Route::get('signup','loginController@getSignup') -> name('signup');
 Route::post('signup','loginController@postSignup');
 
-Route::group(['prefix' => 'user'], function()
-{
-    Route::get('edituser/{user_id}', 'updateUserController@getEditUser') -> name('editUser');
-    Route::post('edituser/{user_id}', 'updateUserController@postEditUser');
-    Route::get('deleteuser/{user_id}', 'updateUserController@getDeleteUser') -> name('deleteUser');
-});
-
+// Admin
 Route::get('admin',[AdminController::class, 'getAdmin']);
 Route::get('database',[AdminController::class, 'getTable']);
-Route::get('user',[AdminController::class, 'getBlank']) -> name('blank');
+
+
+// Route::get('user',[AdminController::class, 'getBlank']) -> name('blank');
 Route::get('adminproduct',[AdminController::class, 'getProduct']) -> name('adminproduct');
 
+
+
+// Anypage error
 Route::get('{any}', 'Error@ErrorPage')
     ->where('any', '.*');
 

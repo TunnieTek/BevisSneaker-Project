@@ -19,6 +19,7 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>#</th>
                                             <th>Username</th>
                                             <th>Password</th>
                                             <th>Fullname</th>
@@ -27,32 +28,24 @@
                                             <th>Address</th>
                                             <th>City</th>
                                         </tr>
-                                        <tr>
-                                            <th><input type="text" name="" id=""></th>
-                                            <th><input type="text" name="" id=""></th>
-                                            <th><input type="text" name="" id=""></th>
-                                            <th><input type="number" name="" id=""></th>
-                                            <th><input type="email" name="" id=""></th>
-                                            <th><input type="text" name="" id=""></th>
-                                            <th><input type="text" name="" id=""></th>
-                                            <th>
-                                                <div class="dropdown">
-                                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Modify
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                                                        <li><a class="dropdown-item active" href="#">Modify</a></li>
-                                                        <li><hr class="dropdown-divider"></li>
-                                                        <li><a class="dropdown-item" href="#">Create</a></li>
-                                                        <li><a class="dropdown-item" href="#">Update</a></li>
-                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                    </ul>
-                                                </div>
-                                            </th>
-                                        </tr>
                                     </thead>
+                                    <tbody>
+                                        @foreach ($user as $key => $value)
+                                        <tr>
+                                            <td>{{ $key + 1}}</td>
+                                            <td>{{ $value -> username}}</td>
+                                            <td>{{ $value -> password}}</td>
+                                            <td>{{ $value -> fullname}}</td>
+                                            <td>{{ $value -> phonenumber}}</td>
+                                            <td>{{ $value -> email}}</td>
+                                            <td>{{ $value -> address}}</td>
+                                            <td>{{ $value -> city}}</td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
                                     <tfoot>
                                         <tr>
+                                            <th>#</th>
                                             <th>Username</th>
                                             <th>Password</th>
                                             <th>Fullname</th>
@@ -66,7 +59,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
 

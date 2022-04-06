@@ -11,11 +11,17 @@
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <h1>LOG IN</h1>
+                                        @if(session('alerter'))
+                                            <section class='alert alert-danger'>{{session('alerter')}}</section>
+                                        @endif
+                                        @if(session('alertsc'))
+                                            <section class='alert alert-success'>{{session('alertsc')}}</section>
+                                        @endif
                                         <form class="row g-3" method="POST">
                                             @csrf
                                             <div class="col-12">
                                                 <label for="inputUsername" class="form-label">Username</label>
-                                                <input type="text" class="form-control" id="inputUsername" name="user_name">
+                                                <input type="text" class="form-control" id="inputUsername" name="username">
                                             </div>
                                             <div class="col-12">
                                                 <label for="inputPassword4" class="form-label">Password</label>

@@ -1,12 +1,11 @@
 <?php
 
 namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class userTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +14,14 @@ class userTableSeeder extends Seeder
      */
     public function run()
     {
-        Db::table('users')->insert([
-            'user_name' => 'admin',
-            'user_email' => 'admin@master.com',
-            'password' => Hash::make('password'),
-            'role' => 'admin'
-        ]);
+        DB::table('users')->insert([
+                    'username' => 'admin',
+                    'password' => Hash::make('FPT@2022'),
+                    'email' => 'admin@travatrix.tech',
+                    'fullname' => 'Administator',
+                    'phonenumber' => '0991999999',
+                    'address' => 'BTEC FPT, Trinh  Van Bo',
+                    'city' => 'Hanoi',
+                ]);
     }
 }
