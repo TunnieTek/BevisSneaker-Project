@@ -56,7 +56,7 @@
                                 <ul style="margin-bottom: 0;">
                                     <li><a href="{{route('index')}}"><h4>HOME</h4></a></li>
                                     <li class="line"></li>
-                                    <li><a href="#"><h4>PRODUCT</h4></a></li>
+                                    <li><a href="{{route('product')}}"><h4>PRODUCT</h4></a></li>
                                     <li class="line"></li>
                                     <li><a href="#"><h4>FEEDBACK</h4></a></li>
                                     <li class="line"></li>

@@ -23,7 +23,7 @@ class ProductTableSeeder extends Seeder
                 'color' => 'Black',
                 'images' => 'images/SingleItem/Male/DarKrix/1.jpg',
                 'category' => 'Male',
-                'description' => 'Bumper Gum EXT (Extension) NE is an upgrade that is classified in the Basas product line, but impresses with an appearance that breaks the usual safety. With a thoughtfully swapped logo arrangement and an array of suede pieces (Suede) appear reasonably on the thick durable NE canvas fabric, accented with supple Gum colors. All make up a set of products with a design that is comfortable in experience, elegant in appearance.',
+                'description' => 'Bumper Gum EXT (Extension) NE is an upgrade that is classified in the Basas product line',
             ]
             );
     }

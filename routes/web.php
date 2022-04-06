@@ -70,7 +70,7 @@ Route::get('database',[AdminController::class, 'getTable']);
 
 
 // Route::get('user',[AdminController::class, 'getBlank']) -> name('blank');
-// Route::get('adminproduct',[AdminController::class, 'getProduct']) -> name('adminproduct');
+Route::get('admin-product',[AdminController::class, 'getProduct']) -> name('admin-product');
 
 
 
@@ -89,4 +89,6 @@ Route::get('logout', function(){
 
 // PRODUCT ================================================================================
 // Route::get('/product', 'ProductController@getAllProduct') ->name('product');
-Route::get('/product',[ProductController::class, 'getAllProduct']);
+// Route::get('product',[ProductController::class, 'getAllProduct']);
+
+Route::get('product', 'ProductController@getAllProduct') ->name('product');
