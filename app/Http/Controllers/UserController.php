@@ -15,11 +15,11 @@ class UserController extends Controller
         return view('admin.admin-blank', compact("user"));
     }
 
-    public function getDeleteUser($username)
-    {
-        $user = User::find($username);
-        $user->delete();
-        return redirect()->route('blank');
-    }
+    // public function getDeleteUser($username)
+    // {
+    //     $user = User::find($username);
+    //     $user->delete();
+    //     return redirect()->route('blank');
+    // }
 
 }

@@ -40,7 +40,7 @@ Route::get('user', 'UserController@getAllUser') ->name('blank');
 
 
 // Delete User
-Route::get('user', 'UserController@getDeleteUser') ->name('blank');
+// Route::get('user', 'UserController@getDeleteUser') ->name('blank');
 
 
 // LOGIN/SIGNUP
