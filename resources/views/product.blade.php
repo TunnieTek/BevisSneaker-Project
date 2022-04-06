@@ -93,26 +93,28 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-xl-3">
-                                        <div class="single--item--product">
-                                            <div class="img-single-item">
-                                                <img src="{{'BevisSneaker'}}/images/Product-Single/2.png" style="width: 100%; border-radius: 5px;" >
+                                        @foreach ( $product as $key => $value )
+                                            <div class="single--item--product">
+                                                <div class="img-single-item">
+                                                    <img src="{{ $value ->images }}" style="width: 100%; border-radius: 5px;" >
+                                                </div>
+                                                <button class="btnBuy" onclick="buynow()">BUY NOW!</button>
+                                                <hr style="border: 1px dashed white;">
+                                                <h4 style="text-align: center;"><a href="#">{{ $value ->productname}}</a></h4>
+                                                <hr style="border: 1px dashed white;">
+                                                <h5 style="text-align: center; color: #ff5f17;">{{$value ->price}}</h5>
                                             </div>
-                                            <button class="btnBuy" onclick="buynow()">BUY NOW!</button>
-                                            <hr style="border: 1px dashed white;">
-                                            <h4 style="text-align: center;"><a href="#">STAN SMITH</a></h4>
-                                            <hr style="border: 1px dashed white;">
-                                            <h5 style="text-align: center; color: #ff5f17;">$500</h5>
-                                        </div>
 
-                                        {{-- JS --}}
-                                        <script>
-                                            function buynow()
-                                            {
-                                                location.assign("detail")
-                                            }
-                                        </script>
+                                            {{-- JS --}}
+                                            <script>
+                                                function buynow()
+                                                {
+                                                    location.assign("detail")
+                                                }
+                                            </script>
+                                            {{-- JS --}}
+                                        @endforeach
 
-                                        {{-- JS --}}
 
                                     </div>
                                 </div>

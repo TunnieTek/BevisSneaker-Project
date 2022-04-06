@@ -19,13 +19,15 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>#</th>
                                             <th>ID Product</th>
                                             <th>Name</th>
                                             <th>Price</th>
-                                            <th>Description</th>
                                             <th>Color</th>
                                             <th>Size</th>
                                             <th>Images</th>
+                                            <th>Category</th>
+                                            <th>Description</th>
                                         </tr>
                                         <tr>
                                             <th><input type="text" name="" id=""></th>
@@ -34,7 +36,7 @@
                                             <th><input type="text" name="" id=""></th>
                                             <th><input type="text" name="" id=""></th>
                                             <th><input type="number" value="35" min="35" max="43" name="" id=""></th>
-                                            <th><input type="file" name="" id=""></th>
+                                            <th><input type="file" name="filenames[]" id=""></th>
                                             <th>
                                                 <div class="dropdown">
                                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -52,6 +54,21 @@
                                         </tr>
 
                                     </thead>
+                                    <tbody>
+                                        @foreach ( $product as $key => $value )
+                                        <tr>
+                                            <th>{{ $key + 1}}</th>
+                                            <th>{{ $value -> productid}}</th>
+                                            <th>{{ $value -> productname}}</th>
+                                            <th>{{ $value -> price}}</th>
+                                            <th>{{ $value -> color}}</th>
+                                            <th>{{ $value -> size}}</th>
+                                            <th>{{ $value -> images}}</th>
+                                            <th>{{ $value -> category}}</th>
+                                            <th>{{ $value -> description}}</th>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

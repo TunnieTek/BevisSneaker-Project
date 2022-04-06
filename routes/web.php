@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\listUserController;
@@ -46,6 +48,19 @@ Route::get('user', 'UserController@getAllUser') ->name('blank');
 // LOGIN/SIGNUP
 Route::get('login', 'loginController@getLogin') -> name('login');;
 Route::post('login', 'loginController@postLogin');
+// Session Login
+// Route::post('login', function () {
+//     $username = Request::input('username');
+//     $password = Request::input('password');
+//     if($username == ['username'] && $password == ['password'])
+//     {
+//         $request::session()->put('login', true);
+//         $request::session()->put('username','username');
+//         return view('homepage')->with('success', 'Logged Successfully');
+//     };
+// });
+
+
 Route::get('signup','loginController@getSignup') -> name('signup');
 Route::post('signup','loginController@postSignup');
 
@@ -55,7 +70,7 @@ Route::get('database',[AdminController::class, 'getTable']);
 
 
 // Route::get('user',[AdminController::class, 'getBlank']) -> name('blank');
-Route::get('adminproduct',[AdminController::class, 'getProduct']) -> name('adminproduct');
+// Route::get('adminproduct',[AdminController::class, 'getProduct']) -> name('adminproduct');
 
 
 
@@ -63,4 +78,15 @@ Route::get('adminproduct',[AdminController::class, 'getProduct']) -> name('admin
 Route::get('{any}', 'Error@ErrorPage')
     ->where('any', '.*');
 
+// Logout
+Route::get('logout', function(){
+    Request::session()->flush();
+    return view('login');
+});
 
+
+
+
+// PRODUCT ================================================================================
+// Route::get('/product', 'ProductController@getAllProduct') ->name('product');
+Route::get('/product',[ProductController::class, 'getAllProduct']);

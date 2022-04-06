@@ -18,7 +18,22 @@
                     <div class="col-xl-10">
                         <a href="{{route('cart')}}"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
                         <a href="{{route('login')}}">
-                            <i class="fa-solid fa-user"></i> Login
+                                @if(session('alertsc'))
+                                    {{session('alertsc')}}
+                                @else
+                                    <i class="fa-solid fa-user"></i> Login
+                                @endif
+{{-- MAGIC MAGIC --}}
+                                {{-- @if($user = Auth::User())
+                                {
+                                    @if(session('alertsc'))
+                                        {{session('alertsc')}}
+                                    @endif
+                                }
+                                @else
+                                    <i class="fa-solid fa-user"></i> Login
+                                @endif --}}
+
                         </a>
                         <a href="#"><i class="fa-solid fa-heart"></i> Love</a>
                         <a href="#"><i class="fa-solid fa-truck"></i> Tracking</a>
@@ -41,9 +56,9 @@
                                 <ul style="margin-bottom: 0;">
                                     <li><a href="{{route('index')}}"><h4>HOME</h4></a></li>
                                     <li class="line"></li>
-                                    <li><a href="{{route('product')}}"><h4>PRODUCT</h4></a></li>
+                                    <li><a href="#"><h4>PRODUCT</h4></a></li>
                                     <li class="line"></li>
-                                    <li><a href="#"><h4>NIKE</h4></a></li>
+                                    <li><a href="#"><h4>FEEDBACK</h4></a></li>
                                     <li class="line"></li>
                                     <li><a href="#"><h4>SALE OFF</h4></a></li>
                                     <li class="line"></li>

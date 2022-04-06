@@ -14,9 +14,6 @@
                                         @if(session('alerter'))
                                             <section class='alert alert-danger'>{{session('alerter')}}</section>
                                         @endif
-                                        @if(session('alertsc'))
-                                            <section class='alert alert-success'>{{session('alertsc')}}</section>
-                                        @endif
                                         <form class="row g-3" method="POST">
                                             @csrf
                                             <div class="col-12">

@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+
 class loginController extends Controller
 {
     public function getLogin()
@@ -17,12 +18,18 @@ class loginController extends Controller
     {
         $data = request()->all();
         if (Auth::attempt(['username' => $data['username'], 'password' => $data['password']])) {
-            $alertsc='Logged Successfully! Hi, ["username"]';
+                // $user = Auth::User();
+                // Session::put('user', $user);
+                // $user=Session::get('user');
+                // return $user->name;
+            $alertsc='Logged Successfully!';
             return redirect()->route('index')->with('alertsc',$alertsc);
         } else {
             $alerter='Username or Password Incorrect';
             return redirect()->back()->with('alerter',$alerter);
         }
+
+
     }
 
     public function getSignup()
