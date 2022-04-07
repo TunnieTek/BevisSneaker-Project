@@ -24,4 +24,19 @@ class ProductController extends Controller
         $product = Product::All();
         return view('admin.admin-product', compact("product"));
     }
+
+    public function addProduct(Request $request)
+    {
+        $product = new product;
+        $product->productid = $request->productid;
+        $product->productname = $request->productname;
+        $product->price = $request->price;
+        $product->color = $request->color;
+        $product->size = $request->size;
+        $product->images = $request->images;
+        $product->category = $request->category;
+        $product->description = $request->description;
+        $product->save();
+        return redirect()->route('admin-product');
+    }
 }

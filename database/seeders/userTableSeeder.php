@@ -16,7 +16,7 @@ class UserTableSeeder extends Seeder
     {
         DB::table('users')->insert([
                     'username' => 'admin',
-                    'password' => Hash::make('FPT@2022'),
+                    'password' => Hash::make('admin'),
                     'email' => 'admin@travatrix.tech',
                     'fullname' => 'Administator',
                     'phonenumber' => '0991999999',

@@ -4,7 +4,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+                    <h1 class="h3 mb-2 text-gray-800">PRODUCT TABLE</h1>
                     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                         For more information about DataTables, please visit the <a target="_blank"
                             href="https://datatables.net">official DataTables documentation</a>.</p>
@@ -30,13 +30,30 @@
                                             <th>Description</th>
                                         </tr>
                                         <tr>
-                                            <th><input type="text" name="" id=""></th>
-                                            <th><input type="text" name="" id=""></th>
-                                            <th><input type="number" min="0" value="10" name="" id=""></th>
-                                            <th><input type="text" name="" id=""></th>
-                                            <th><input type="text" name="" id=""></th>
-                                            <th><input type="number" value="35" min="35" max="43" name="" id=""></th>
-                                            <th><input type="file" name="filenames[]" id=""></th>
+                                            <form action="" method="post">
+                                                @csrf
+                                                <th></th>
+                                                <th><input type="text" name="productid" id=""></th>
+                                                <th><input type="text" name="productname" id=""></th>
+                                                <th><input type="number" min="0" value="10" name="price" id=""></th>
+                                                <th><input type="text" name="color" id=""></th>
+                                                <th><input type="number" value="35" min="35" max="43" name="size" id=""></th>
+                                                <th><input type="file" name="images" id="" multiple></th>
+                                                <th><input type="text" name="category" id="" ></th>
+                                                <th><input type="text" name="description" id="" ></th>
+                                                <th>
+                                                    <input type="submit">
+                                                </th>
+                                            </form>
+                                            {{-- @csrf
+                                            <th><input type="text" name="productid" id=""></th>
+                                            <th><input type="text" name="productname" id=""></th>
+                                            <th><input type="number" min="0" value="10" name="price" id=""></th>
+                                            <th><input type="text" name="color" id=""></th>
+                                            <th><input type="number" value="35" min="35" max="43" name="size" id=""></th>
+                                            <th><input type="file" name="images" id="" multiple></th>
+                                            <th><input type="text" name="category" id="" ></th>
+                                            <th><input type="text" name="description" id="" ></th>
                                             <th>
                                                 <div class="dropdown">
                                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +67,7 @@
                                                         <li><a class="dropdown-item" href="#">Delete</a></li>
                                                     </ul>
                                                 </div>
-                                            </th>
+                                            </th> --}}
                                         </tr>
 
                                     </thead>
@@ -61,6 +78,7 @@
                                             <th>{{ $value -> productid}}</th>
                                             <th>{{ $value -> productname}}</th>
                                             <th>{{ $value -> price}}</th>
+                                            {{-- <th>{{ $value -> size}}</th> --}}
                                             <th>{{ $value -> color}}</th>
                                             <th>{{ $value -> size}}</th>
                                             <th>{{ $value -> images}}</th>

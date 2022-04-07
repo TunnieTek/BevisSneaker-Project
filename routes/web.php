@@ -93,3 +93,5 @@ Route::get('logout', function(){
 
 Route::get('product', 'ProductController@getAllProduct') ->name('product');
 Route::get('admin-product', 'ProductController@getAllAdminProduct') ->name('admin-product');
+
+Route::post('admin-product','ProductController@addProduct') ->name('admin-product');

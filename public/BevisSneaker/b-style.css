@@ -345,7 +345,7 @@ a:hover {
 }
 
 .product .single--product .col-xl-3 {
-    padding: 2%;
+    justify-content: space-between;
 }
 
 .single--item--product {
