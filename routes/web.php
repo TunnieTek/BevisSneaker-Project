@@ -98,3 +98,4 @@ Route::post('admin-product','ProductController@addProduct') ->name('admin-produc
 
 // Route::get('detail/{productid}','ProductController@Detail')  -> name('detail');
 Route::get('detail/{productid}',[ProductController::class, 'Detail']);
+Route::get('admin-product/{productid}',[ProductController::class, 'DeleteProduct']) ->name('delete');

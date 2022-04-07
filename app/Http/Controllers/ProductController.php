@@ -46,4 +46,11 @@ class ProductController extends Controller
         return view('detail',['data' => $data]);
 
     }
+
+    public function DeleteProduct($productid)
+    {
+        $product = Product::find($productid);
+        $product->delete();
+        return back();
+    }
 }

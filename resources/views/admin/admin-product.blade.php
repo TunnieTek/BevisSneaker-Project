@@ -42,7 +42,7 @@
                                                 <th><input type="text" name="category" id="" ></th>
                                                 <th><input type="text" name="description" id="" ></th>
                                                 <th>
-                                                    <input type="submit">
+                                                    <input type="submit" value="Create">
                                                 </th>
                                             </form>
                                             {{-- @csrf
@@ -84,6 +84,7 @@
                                             <th>{{ $value -> images}}</th>
                                             <th>{{ $value -> category}}</th>
                                             <th>{{ $value -> description}}</th>
+                                            <th><a href="{{route('delete',$value->productid)}}">Delete</a></th>
                                         </tr>
                                         @endforeach
                                     </tbody>
