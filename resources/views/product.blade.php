@@ -97,7 +97,7 @@
                                         {{-- @foreach ( $product as $key => $value ) --}}
                                             <div class="single--item--product">
                                                 <div class="img-single-item">
-                                                    <img src="BevisSneaker/{{$value ->images}}" style="width: 100%; border-radius: 5px;" >
+                                                    <img src="BevisSneaker/images/SingleItem/{{$value ->images}}" style="width: 100%; border-radius: 5px;" >
                                                 </div>
                                                 <a class="btnBuy" style="text-align: center" href={{"detail/".$value['productid']}}>BUY NOW</a>
                                                 <hr style="border: 1px dashed white;">

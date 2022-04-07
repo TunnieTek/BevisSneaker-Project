@@ -53,4 +53,31 @@ class ProductController extends Controller
         $product->delete();
         return back();
     }
+
+
+    public function updateProduct(Request $request, $productid)
+    {
+        $product = Product::find($productid);
+        $product->productid = $request->productid;
+        $product->productname = $request->productname;
+        $product->price = $request->price;
+        $product->color = $request->color;
+        $product->size = $request->size;
+        $product->images = $request->images;
+        $product->category = $request->category;
+        $product->description = $request->description;
+        $product->images2 = $request->images2;
+        $product->images3 = $request->images3;
+        $product->images4 = $request->images4;
+        $product->images5 = $request->images5;
+        $product->save();
+        return back();
+    }
+
+    public function getUpdateProduct($productid)
+    {
+        $data['product'] = Product::find($productid);
+        return view('admin.admin-updateProduct',$data);
+    }
+
 }

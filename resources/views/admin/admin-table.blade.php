@@ -16,62 +16,40 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Senior Javascript Developer</td>
-                                            <td>Edinburgh</td>
-                                            <td>22</td>
-                                            <td>2012/03/29</td>
-                                            <td>$433,060</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="form-product">
+                                    <ul style="list-style: none">
+                                        <form action="" method="post">
+                                            @csrf
+                                            <li>ID Product</li>
+                                            <li><input type="text" name="productid" id=""></li>
+                                            <li>Name</li>
+                                            <li><input type="text" name="productname" id=""></li>
+                                            <li>Price</li>
+                                            <li><input type="number" min="0" value="10" name="price" id=""></li>
+                                            <li>Color</li>
+                                            <li><input type="text" name="color" id=""></li>
+                                            <li>Size</li>
+                                            <li><input type="number" value="35" min="35" max="43" name="size" id=""></li>
+                                            <li>Images</li>
+                                            <li><input type="file" name="images" id="" multiple></li>
+                                            <li>Category</li>
+                                            <li><input type="text" name="category" id="" ></li>
+                                            <li>Description</li>
+                                            <li><input type="text" name="description" id="" ></li>
+                                            <li>Images-2</li>
+                                            <li><input type="file" name="images" id="" multiple></li>
+                                            <li>Images-3</li>
+                                            <li><input type="file" name="images" id="" multiple></li>
+                                            <li>Images-4</li>
+                                            <li><input type="file" name="images" id="" multiple></li>
+                                            <li>Images-5</li>
+                                            <li><input type="file" name="images" id="" multiple></li>
+                                            <li>
+                                                <button class="btn btn-success" type="submit">Create</button>
+                                            </li>
+                                        </form>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

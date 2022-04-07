@@ -34,7 +34,7 @@ Route::get('cart',[PageController::class, 'getCart']) -> name('cart');
 
 // Route::get('login',[loginController::class, 'Login']);
 
-Route::get('homepage',[PageController::class, 'homepage']) -> name('homepage');
+// Route::get('contact',[PageController::class, 'contact']) -> name('contact');
 
 // list all user
 // Route::get('user', [UserController::class, 'getAllUser'])->name('user');
@@ -99,3 +99,12 @@ Route::post('admin-blank','UserController@updateUser') ->name('UpdateUser');
 
 Route::get('UpdateUser/{username}','UserController@getUpdateUser') -> name('UU');
 Route::post('UpdateUser/{username}','UserController@updateUser');
+
+
+// Update Product
+Route::get('admin-product','ProductController@getAllAdminProduct') -> name('admin-product');
+Route::post('admin-product','ProductController@updateProduct') ->name('UpdateProduct');
+
+
+Route::get('UpdateProduct/{productid}','ProductController@getUpdateProduct') -> name('UP');
+Route::post('UpdateProduct/{productid}','ProductController@updateProduct');

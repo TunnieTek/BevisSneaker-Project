@@ -41,8 +41,11 @@
                                             <td>{{ $value -> email}}</td>
                                             <td>{{ $value -> address}}</td>
                                             <td>{{ $value -> city}}</td>
-                                            <th><a href="{{route('deleteUser',$value->username)}}">Delete</a></th>
-                                            <th><a href="{{route('UU',$value->username)}}">Update</a></th>
+                                            <th>
+                                                <a href="{{route('deleteUser',$value->username)}}"><button style="width: 8rem" class="btn btn-danger">Delete</button></a>
+                                                <br>
+                                                <a href="{{route('UU',$value->username)}}"><button style="width: 8rem" class="btn btn-success">Update</button></a>
+                                                </th>
                                         </tr>
                                         @endforeach
                                     </tbody>

@@ -53,7 +53,7 @@
                                                 <th><input type="email" name="email" value="{{$user->email}}"></th>
                                                 <th><input type="text" name="address" value="{{$user->address}}"></th>
                                                 <th><input type="text" name="city" value="{{$user->city}}"></th>
-                                                <th><button type="submit">Update Dum Em</button></th>
+                                                <th><button type="submit" class="btn btn-success">Update</button></th>
                                             </tr>
                                         </form>
                                     </tbody>

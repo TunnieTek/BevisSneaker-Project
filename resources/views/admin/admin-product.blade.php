@@ -28,48 +28,12 @@
                                             <th>Images</th>
                                             <th>Category</th>
                                             <th>Description</th>
+                                            <th>Images2</th>
+                                            <th>Images3</th>
+                                            <th>Images4</th>
+                                            <th>Images5</th>
+                                            <th>Function</th>
                                         </tr>
-                                        <tr>
-                                            <form action="" method="post">
-                                                @csrf
-                                                <th></th>
-                                                <th><input type="text" name="productid" id=""></th>
-                                                <th><input type="text" name="productname" id=""></th>
-                                                <th><input type="number" min="0" value="10" name="price" id=""></th>
-                                                <th><input type="text" name="color" id=""></th>
-                                                <th><input type="number" value="35" min="35" max="43" name="size" id=""></th>
-                                                <th><input type="file" name="images" id="" multiple></th>
-                                                <th><input type="text" name="category" id="" ></th>
-                                                <th><input type="text" name="description" id="" ></th>
-                                                <th>
-                                                    <input type="submit" value="Create">
-                                                </th>
-                                            </form>
-                                            {{-- @csrf
-                                            <th><input type="text" name="productid" id=""></th>
-                                            <th><input type="text" name="productname" id=""></th>
-                                            <th><input type="number" min="0" value="10" name="price" id=""></th>
-                                            <th><input type="text" name="color" id=""></th>
-                                            <th><input type="number" value="35" min="35" max="43" name="size" id=""></th>
-                                            <th><input type="file" name="images" id="" multiple></th>
-                                            <th><input type="text" name="category" id="" ></th>
-                                            <th><input type="text" name="description" id="" ></th>
-                                            <th>
-                                                <div class="dropdown">
-                                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Modify
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                                                        <li><a class="dropdown-item active" href="#">Modify</a></li>
-                                                        <li><hr class="dropdown-divider"></li>
-                                                        <li><a class="dropdown-item" href="#">Create</a></li>
-                                                        <li><a class="dropdown-item" href="#">Update</a></li>
-                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                    </ul>
-                                                </div>
-                                            </th> --}}
-                                        </tr>
-
                                     </thead>
                                     <tbody>
                                         @foreach ( $product as $key => $value )
@@ -84,7 +48,15 @@
                                             <th>{{ $value -> images}}</th>
                                             <th>{{ $value -> category}}</th>
                                             <th>{{ $value -> description}}</th>
-                                            <th><a href="{{route('delete',$value->productid)}}">Delete</a></th>
+                                            <th>{{ $value -> images2}}</th>
+                                            <th>{{ $value -> images3}}</th>
+                                            <th>{{ $value -> images4}}</th>
+                                            <th>{{ $value -> images5}}</th>
+                                            <th>
+                                                <a href="{{route('delete',$value->productid)}}"><button style="width: 8rem" class="btn btn-danger">Delete</button></a>
+                                                <br>
+                                                <a href="{{route('UP',$value->productid)}}"><button style="width: 8rem" class="btn btn-success">Update</button></a>
+                                            </th>
                                         </tr>
                                         @endforeach
                                     </tbody>

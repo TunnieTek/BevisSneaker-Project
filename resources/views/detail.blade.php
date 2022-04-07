@@ -10,20 +10,20 @@
                     <div class="col-xl-3">
                         <hr>
                         <div class="main-pic">
-                            <img src="../BevisSneaker{{$data['images']}}">
+                            <img src="../BevisSneaker/images/SingleItem/{{$data['images']}}">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-xl-3">
-                                        <img src="../BevisSneaker{{$data['images']}}" >
+                                        <img src="../BevisSneaker/images/SingleItem/{{$data['images2']}}" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="../BevisSneaker{{$data['images']}}" >
+                                        <img src="../BevisSneaker/images/SingleItem/{{$data['images3']}}" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="../BevisSneaker{{$data['images']}}" >
+                                        <img src="../BevisSneaker/images/SingleItem/{{$data['images4']}}" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="../BevisSneaker{{$data['images']}}" >
+                                        <img src="../BevisSneaker/images/SingleItem/{{$data['images5']}}" >
                                     </div>
                                 </div>
                             </div>
