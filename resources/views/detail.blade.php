@@ -10,20 +10,20 @@
                     <div class="col-xl-3">
                         <hr>
                         <div class="main-pic">
-                            <img src="{{$data['images']}}">
+                            <img src="../BevisSneaker{{$data['images']}}">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-xl-3">
-                                        <img src="{{$data['images']}}" >
+                                        <img src="../BevisSneaker{{$data['images']}}" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="{{$data['images']}}" >
+                                        <img src="../BevisSneaker{{$data['images']}}" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="{{$data['images']}}" >
+                                        <img src="../BevisSneaker{{$data['images']}}" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="{{$data['images']}}" >
+                                        <img src="../BevisSneaker{{$data['images']}}" >
                                     </div>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@
                         <div class="info-product">
                             <h1>{{$data['productname']}}</h1>
                             <p>ID: {{$data['productid']}}</p>
-                            <h4 style="color: #ff5f17;">{{$data['price']}}</h4>
+                            <h4 style="color: #ff5f17;">${{$data['price']}}</h4>
                             <hr style="border: 2px dashed white;">
                             <p>{{$data['description']}}</p>
                             <hr style="border: 2px dashed white;">
