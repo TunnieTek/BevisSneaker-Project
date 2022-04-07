@@ -99,9 +99,9 @@
                                                 <div class="img-single-item">
                                                     <img src="BevisSneaker/{{$value ->images}}" style="width: 100%; border-radius: 5px;" >
                                                 </div>
-                                                <a class="btnBuy" href={{"detail/".$value['productid']}} >BUY NOW!</a>
+                                                <a class="btnBuy" style="text-align: center" href={{"detail/".$value['productid']}}>BUY NOW</a>
                                                 <hr style="border: 1px dashed white;">
-                                                <h4 style="text-align: center;"><a href={{"detail/".$value['productid']}}>{{ $value ->productname}}</a></h4>
+                                                <h4 style="text-align: center;"><a href={{"detail/".$value['productid']}}>{{$value->productname}}</a></h4>
                                                 <hr style="border: 1px dashed white;">
                                                 <h5 style="text-align: center; color: #ff5f17;">${{$value ->price}}</h5>
                                             </div>

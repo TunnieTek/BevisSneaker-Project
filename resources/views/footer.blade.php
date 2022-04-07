@@ -7,7 +7,7 @@
                             <div class="row">
                                 <div class="col-xl-12">
                                     <!-- LOGO -->
-                                    <img src="{{'BevisSneaker'}}/images/STORE--001.png" alt="">
+                                    <img src="../BevisSneaker/images/STORE--001.png" alt="">
                                 </div>
                             </div>
                             <div class="row">
@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
-                                    <img src="images/footerlogo.png" alt="">
+                                    <img src="../BevisSneaker/images/footerlogo.png" alt="">
                                 </div>
                             </div>
                         </div>

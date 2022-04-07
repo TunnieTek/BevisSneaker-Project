@@ -48,7 +48,7 @@
                     <div class="navbar">
                         <div class="col-xl-3">
                             <!-- LOGO -->
-                            <img src="{{'BevisSneaker'}}/images/LOGO--001.png" alt="">
+                            <img src="../BevisSneaker/images/LOGO--001.png" alt="">
                         </div>
                         <div class="col-xl-6">
                             <!-- Navbar -->

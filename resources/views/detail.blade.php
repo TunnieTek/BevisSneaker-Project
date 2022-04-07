@@ -34,6 +34,7 @@
                         <hr>
                         <div class="info-product">
                             <h1>{{$data['productname']}}</h1>
+                            <p>Category:{{$data['category']}} </p>
                             <p>ID: {{$data['productid']}}</p>
                             <h4 style="color: #ff5f17;">${{$data['price']}}</h4>
                             <hr style="border: 2px dashed white;">
@@ -62,14 +63,14 @@
                                 </table>
                             </form>
                             <hr style="border: 2px dashed white;">
-                            <button class="btn-footer" onclick="addCart()">MUA NGAY</button>
+                            <button class="btn-footer" onclick="addCart()">ORDER NOW    </button>
                         </div>
 
                         {{-- JS --}}
                         <script>
                             function addCart()
                                 {
-                                     location.assign("cart")
+                                     location.assign("../cart")
                                 }
                         </script>
                         {{-- JS --}}
