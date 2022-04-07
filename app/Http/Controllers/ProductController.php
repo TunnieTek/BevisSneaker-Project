@@ -39,4 +39,11 @@ class ProductController extends Controller
         $product->save();
         return redirect()->route('admin-product');
     }
+
+    public function Detail($productid)
+    {
+        $data = Product::find($productid);
+        return view('detail',['data' => $data]);
+
+    }
 }

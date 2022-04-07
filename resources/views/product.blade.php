@@ -92,27 +92,27 @@
                         <div class="single--product">
                             <div class="container-fluid">
                                 <div class="row">
-                                    @foreach ( $product as $key => $value )
+                                    @foreach ( $product as $value )
                                     <div class="col-xl-3">
                                         {{-- @foreach ( $product as $key => $value ) --}}
                                             <div class="single--item--product">
                                                 <div class="img-single-item">
                                                     <img src="BevisSneaker/{{$value ->images}}" style="width: 100%; border-radius: 5px;" >
                                                 </div>
-                                                <button class="btnBuy" onclick="buynow()">BUY NOW!</button>
+                                                <a class="btnBuy" href={{"detail/".$value['productid']}} >BUY NOW!</a>
                                                 <hr style="border: 1px dashed white;">
-                                                <h4 style="text-align: center;"><a href="#">{{ $value ->productname}}</a></h4>
+                                                <h4 style="text-align: center;"><a href={{"detail/".$value['productid']}}>{{ $value ->productname}}</a></h4>
                                                 <hr style="border: 1px dashed white;">
                                                 <h5 style="text-align: center; color: #ff5f17;">${{$value ->price}}</h5>
                                             </div>
 
                                             {{-- JS --}}
-                                            <script>
+                                            {{-- <script>
                                                 function buynow()
                                                 {
                                                     location.assign("detail")
                                                 }
-                                            </script>
+                                            </script> --}}
                                             {{-- JS --}}
                                     </div>
                                     @endforeach

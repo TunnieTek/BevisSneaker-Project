@@ -29,7 +29,7 @@ Route::get('/', function () {
 
 Route::get('index',[PageController::class, 'getIndex']) -> name('index');
 Route::get('product',[PageController::class, 'getProduct'])  -> name('product');
-Route::get('detail',[PageController::class, 'getProductDetail'])  -> name('detail');
+// Route::get('detail',[PageController::class, 'getProductDetail'])  -> name('detail');
 Route::get('cart',[PageController::class, 'getCart']) -> name('cart');
 
 // Route::get('login',[loginController::class, 'Login']);
@@ -74,9 +74,9 @@ Route::get('admin-product',[AdminController::class, 'getProduct']) -> name('admi
 
 
 
-// Anypage error
-Route::get('{any}', 'Error@ErrorPage')
-    ->where('any', '.*');
+// // Anypage error
+// Route::get('{any}', 'Error@ErrorPage')
+//     ->where('any', '.*');
 
 // Logout
 Route::get('logout', function(){
@@ -95,3 +95,6 @@ Route::get('product', 'ProductController@getAllProduct') ->name('product');
 Route::get('admin-product', 'ProductController@getAllAdminProduct') ->name('admin-product');
 
 Route::post('admin-product','ProductController@addProduct') ->name('admin-product');
+
+// Route::get('detail/{productid}','ProductController@Detail')  -> name('detail');
+Route::get('detail/{productid}',[ProductController::class, 'Detail']);

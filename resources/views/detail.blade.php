@@ -10,33 +10,34 @@
                     <div class="col-xl-3">
                         <hr>
                         <div class="main-pic">
-                            <img src="{{'BevisSneaker'}}/images/Product-Single/1.png">
+                            <img src="{{$data['images']}}">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-xl-3">
-                                        <img src="{{'BevisSneaker'}}/images/Product-Single/1.png" >
+                                        <img src="{{$data['images']}}" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="{{'BevisSneaker'}}/images/Product-Single/2.png" >
+                                        <img src="{{$data['images']}}" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="{{'BevisSneaker'}}/images/Product-Single/3.png" >
+                                        <img src="{{$data['images']}}" >
                                     </div>
                                     <div class="col-xl-3">
-                                        <img src="{{'BevisSneaker'}}/images/Product-Single/4.png" >
+                                        <img src="{{$data['images']}}" >
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     <div class="col-xl-3">
                         <hr>
                         <div class="info-product">
-                            <h1>STAN SMITH</h1>
-                            <p>ID: Stansmith001</p>
-                            <h4 style="color: #ff5f17;">$250</h4>
+                            <h1>{{$data['productname']}}</h1>
+                            <p>ID: {{$data['productid']}}</p>
+                            <h4 style="color: #ff5f17;">{{$data['price']}}</h4>
                             <hr style="border: 2px dashed white;">
-                            <p>Thông tin sản phẩm sẽ được thêm ở đây, giày được sản xuất vào năm 2022 do Travatrix sản xuất, ví dụ như thế.</p>
+                            <p>{{$data['description']}}</p>
                             <hr style="border: 2px dashed white;">
 
                             <form method="post">
@@ -48,25 +49,13 @@
                                     <tr>
                                         <td>
                                             <select name="" id="">
-                                                <option value="Red">RED</option>
-                                                <option value="Blue">BLUE</option>
-                                                <option value="Black">BLACK</option>
-                                                <option value="White">WHITE</option>
-                                                <option value="Yellow">YELLOW</option>
-                                                <option value="Green">GREEN</option>
+                                                <option value="{{$data['color']}}">{{$data['color']}}</option>
+
                                             </select>
                                         </td>
                                         <td>
                                             <select name="" id="">
-                                                <option value="Red">35</option>
-                                                <option value="Blue">36</option>
-                                                <option value="Black">37</option>
-                                                <option value="White">38</option>
-                                                <option value="Yellow">39</option>
-                                                <option value="Green">40</option>
-                                                <option value="Green">41</option>
-                                                <option value="Green">42</option>
-                                                <option value="Green">43</option>
+                                                <option value="{{$data['size']}}">{{$data['size']}}</option>
                                             </select>
                                         </td>
                                     </tr>
