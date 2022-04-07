@@ -9,8 +9,8 @@ class category extends Model
 {
     use HasFactory;
     public $table = 'category';
-    protected $fillable = ['categoryid','categoryname','description'];
-    protected $primaryKey = 'categoryid';
+    protected $fillable = ['cateid','catename','catedescription'];
+    protected $primaryKey = 'cateid';
     public $timestamps = false;
     public $incrementing = false;
     // In Laravel 6.0+ make sure to also set $keyType
