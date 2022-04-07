@@ -37,13 +37,13 @@
                                             <li>Description</li>
                                             <li><input type="text" name="description" id="" ></li>
                                             <li>Images-2</li>
-                                            <li><input type="file" name="images" id="" multiple></li>
+                                            <li><input type="file" name="images2" id="" multiple></li>
                                             <li>Images-3</li>
-                                            <li><input type="file" name="images" id="" multiple></li>
+                                            <li><input type="file" name="images3" id="" multiple></li>
                                             <li>Images-4</li>
-                                            <li><input type="file" name="images" id="" multiple></li>
+                                            <li><input type="file" name="images4" id="" multiple></li>
                                             <li>Images-5</li>
-                                            <li><input type="file" name="images" id="" multiple></li>
+                                            <li><input type="file" name="images5" id="" multiple></li>
                                             <li>
                                                 <button class="btn btn-success" type="submit">Create</button>
                                             </li>

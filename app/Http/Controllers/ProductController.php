@@ -36,8 +36,12 @@ class ProductController extends Controller
         $product->images = $request->images;
         $product->category = $request->category;
         $product->description = $request->description;
+        $product->images2 = $request->images2;
+        $product->images3 = $request->images3;
+        $product->images4 = $request->images4;
+        $product->images5 = $request->images5;
         $product->save();
-        return redirect()->route('admin-product');
+        return redirect()->route('database');
     }
 
     public function Detail($productid)

@@ -38,7 +38,7 @@
                             <p>ID: {{$data['productid']}}</p>
                             <h4 style="color: #ff5f17;">${{$data['price']}}</h4>
                             <hr style="border: 2px dashed white;">
-                            <p>{{$data['description']}}</p>
+                            <p style="text-align: justify">{{$data['description']}}</p>
                             <hr style="border: 2px dashed white;">
 
                             <form method="post">

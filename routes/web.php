@@ -84,7 +84,7 @@ Route::get('logout', function(){
 Route::get('product', 'ProductController@getAllProduct') ->name('product');
 Route::get('admin-product', 'ProductController@getAllAdminProduct') ->name('admin-product');
 
-Route::post('admin-product','ProductController@addProduct') ->name('admin-product');
+Route::post('database','ProductController@addProduct') ->name('database');
 
 // Route::get('detail/{productid}','ProductController@Detail')  -> name('detail');
 Route::get('detail/{productid}',[ProductController::class, 'Detail']);
