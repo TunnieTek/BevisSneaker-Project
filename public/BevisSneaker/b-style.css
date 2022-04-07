@@ -1,20 +1,23 @@
 /* LINK */
-@import url(//db.onlinewebfonts.com/c/5bf04c97279e55318d67c21101cfd898?family=URW+Geometric);
 
+@import url(//db.onlinewebfonts.com/c/5bf04c97279e55318d67c21101cfd898?family=URW+Geometric);
 @font-face {
     font-family: "URW Geometric";
     src: url("//db.onlinewebfonts.com/t/5bf04c97279e55318d67c21101cfd898.eot");
     src: url("//db.onlinewebfonts.com/t/5bf04c97279e55318d67c21101cfd898.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/5bf04c97279e55318d67c21101cfd898.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/5bf04c97279e55318d67c21101cfd898.woff") format("woff"), url("//db.onlinewebfonts.com/t/5bf04c97279e55318d67c21101cfd898.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/5bf04c97279e55318d67c21101cfd898.svg#URW Geometric") format("svg");
 }
 
-.col-xl-6 .col-12 a{
+.col-xl-6 .col-12 a {
     color: whitesmoke !important;
 }
 
-.col-xl-6 .col-12 a:hover{
+.col-xl-6 .col-12 a:hover {
     color: #ff5f17;
 }
 
+.header {
+    position: fixed;
+}
 
 * {
     border: 0;
@@ -25,7 +28,6 @@ section {
     height: 100%;
     scroll-snap-type: y mandatory;
 }
-
 
 #bannervideo {
     width: 100%;
@@ -38,7 +40,9 @@ ul li {
     list-style: none;
 }
 
+
 /* ADS */
+
 .ads {
     background-color: #303030;
     color: whitesmoke;
@@ -64,7 +68,9 @@ a {
     text-decoration: none;
 }
 
+
 /* HEADER */
+
 
 /* HEADER - LOGO */
 
@@ -82,7 +88,6 @@ header a {
 
 header a:hover {
     color: #ff5f17;
-
 }
 
 .btn-outline-secondary {
@@ -94,7 +99,6 @@ header a:hover {
     border-radius: 0;
     width: 50%;
     outline: none;
-
 }
 
 .input-group {
@@ -123,7 +127,6 @@ header .navbar .line {
     border-right: #e3e2e2 2px solid;
 }
 
-
 header .navbar img {
     width: 50%;
     padding-left: 70px;
@@ -135,7 +138,9 @@ header .navbar .nav-menu {
     justify-content: center;
 }
 
+
 /* CONTENT HOTNEWS*/
+
 .hotnews {
     background-color: #f5f5f5;
 }
@@ -148,7 +153,6 @@ header .navbar .nav-menu {
 
 
 /* BANNER */
-
 
 .banner .col-xl-12 {
     padding: 0;
@@ -163,7 +167,6 @@ header .navbar .nav-menu {
 .content--banner-01 .col-xl-4 {
     z-index: 100;
     margin-top: -30%;
-
 }
 
 .content--banner-01 .col-xl-4 h1 {
@@ -200,13 +203,15 @@ header .navbar .nav-menu {
     transform: translateX(30%);
 }
 
+
 /* Recommend */
+
 .recommend .card {
     /* border-radius: 15%; */
     border: none;
 }
 
-.recommend .col-xl-3 img{
+.recommend .col-xl-3 img {
     padding: 5%;
 }
 
@@ -225,7 +230,9 @@ header .navbar .nav-menu {
     transform: translateY(-2%);
 }
 
+
 /* FOOTER */
+
 footer {
     background-color: #4c4c4c;
     width: 100%;
@@ -292,7 +299,6 @@ footer i {
 footer .dky {
     width: 100%;
     margin-top: 10px;
-
 }
 
 footer .dky-input {
@@ -325,22 +331,28 @@ footer .row {
     padding: 0
 }
 
-a:hover{
+a:hover {
     color: #ff5f17;
 }
 
+
 /* ================================================================== */
+
 .product {
     font-family: 'URW Geometric';
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.single--item--product{
+.product .single--product .col-xl-3 {
+    padding: 2%;
+}
+
+.single--item--product {
     position: relative;
 }
 
-.product .btnBuy{
+.product .btnBuy {
     padding: 5%;
     background-color: #ff5f17;
     color: #f6f6f6;
@@ -355,60 +367,56 @@ a:hover{
     display: block;
 }
 
-
-
 .product .card-title,
 .product .card-text {
     text-align: center;
 }
 
-.product .card{
+.product .card {
     outline: none;
 }
 
-.product .card a{
+.product .card a {
     background-color: #ff5f17;
     color: #f5f5f5;
     padding: 1%;
     visibility: hidden;
 }
 
-.product .container-fluid, .product .col-xl-3{
+.product .container-fluid,
+.product .col-xl-3 {
     padding: 0;
 }
 
-
-.product .card:hover a{
+.product .card:hover a {
     transition: 1.5s;
     visibility: visible;
     margin-left: 25%;
 }
 
-.product ul{
+.product ul {
     padding: 0;
 }
 
-hr{
+hr {
     color: #303030;
 }
 
-.product .filter{
+.product .filter {
     padding-top: 10%;
 }
 
-.single--item--product p{
+.single--item--product p {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     padding: 5%;
 }
 
-.single--item--product h5{
+.single--item--product h5 {
     font-weight: 500;
     text-align: center;
     padding: 5%;
 }
-
-
 
 .product .card-title,
 .product .card-text {
@@ -430,7 +438,6 @@ hr{
 .product .col-xl-3 {
     padding: 0;
 }
-
 
 .product .card:hover a {
     transition: 1.5s;
@@ -463,9 +470,8 @@ hr {
 }
 
 
-
-
 /* 404 */
+
 .n404 {
     text-align: center;
     font-weight: bold;
@@ -480,6 +486,7 @@ hr {
 
 
 /* login/signup */
+
 .main-form {
     background-color: #4c4c4c;
     color: #bbbbbb;
@@ -498,7 +505,9 @@ hr {
     width: 90%;
 }
 
+
 /* product detail */
+
 .main-pic img {
     width: 100%;
     padding: 3%;
@@ -518,7 +527,6 @@ hr {
 .other-pic .col-xl-3 {
     padding: 0;
 }
-
 
 .info-product {
     font-family: 'URW Geometric';
@@ -560,15 +568,15 @@ td {
 
 
 /* CART */
-.cart{
+
+.cart {
     font-family: 'URW Geometric';
     padding: 5%;
 }
 
-
 .cart body {
-  background: #eecda3;
-  background: -webkit-linear-gradient(to right, #eecda3, #ef629f);
-  background: linear-gradient(to right, #eecda3, #ef629f);
-  min-height: 100vh;
+    background: #eecda3;
+    background: -webkit-linear-gradient(to right, #eecda3, #ef629f);
+    background: linear-gradient(to right, #eecda3, #ef629f);
+    min-height: 100vh;
 }

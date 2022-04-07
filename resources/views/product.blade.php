@@ -92,17 +92,18 @@
                         <div class="single--product">
                             <div class="container-fluid">
                                 <div class="row">
+                                    @foreach ( $product as $key => $value )
                                     <div class="col-xl-3">
-                                        @foreach ( $product as $key => $value )
+                                        {{-- @foreach ( $product as $key => $value ) --}}
                                             <div class="single--item--product">
                                                 <div class="img-single-item">
-                                                    <img src="{{ $value ->images }}" style="width: 100%; border-radius: 5px;" >
+                                                    <img src="BevisSneaker/{{$value ->images}}" style="width: 100%; border-radius: 5px;" >
                                                 </div>
                                                 <button class="btnBuy" onclick="buynow()">BUY NOW!</button>
                                                 <hr style="border: 1px dashed white;">
                                                 <h4 style="text-align: center;"><a href="#">{{ $value ->productname}}</a></h4>
                                                 <hr style="border: 1px dashed white;">
-                                                <h5 style="text-align: center; color: #ff5f17;">{{$value ->price}}</h5>
+                                                <h5 style="text-align: center; color: #ff5f17;">${{$value ->price}}</h5>
                                             </div>
 
                                             {{-- JS --}}
@@ -113,10 +114,8 @@
                                                 }
                                             </script>
                                             {{-- JS --}}
-                                        @endforeach
-
-
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

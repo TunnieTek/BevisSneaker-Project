@@ -15,7 +15,13 @@ class ProductController extends Controller
 {
     public function getAllProduct()
     {
-        return Product::All();
+        $product = Product::All();
         return view('product', compact("product"));
+    }
+
+    public function getAllAdminProduct()
+    {
+        $product = Product::All();
+        return view('admin.admin-product', compact("product"));
     }
 }
