@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ProController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\listUserController;
@@ -38,27 +38,17 @@ Route::get('homepage',[PageController::class, 'homepage']) -> name('homepage');
 
 // list all user
 // Route::get('user', [UserController::class, 'getAllUser'])->name('user');
-Route::get('user', 'UserController@getAllUser') ->name('blank');
+Route::get('user', 'UserController@getAllUser') ->name('user');
 
 
 // Delete User
-// Route::get('user', 'UserController@getDeleteUser') ->name('blank');
+Route::get('admin-blank/{username}',[UserController::class, 'getDeleteUser']) ->name('deleteUser');
 
 
 // LOGIN/SIGNUP
 Route::get('login', 'loginController@getLogin') -> name('login');;
 Route::post('login', 'loginController@postLogin');
-// Session Login
-// Route::post('login', function () {
-//     $username = Request::input('username');
-//     $password = Request::input('password');
-//     if($username == ['username'] && $password == ['password'])
-//     {
-//         $request::session()->put('login', true);
-//         $request::session()->put('username','username');
-//         return view('homepage')->with('success', 'Logged Successfully');
-//     };
-// });
+
 
 
 Route::get('signup','loginController@getSignup') -> name('signup');
@@ -99,3 +89,13 @@ Route::post('admin-product','ProductController@addProduct') ->name('admin-produc
 // Route::get('detail/{productid}','ProductController@Detail')  -> name('detail');
 Route::get('detail/{productid}',[ProductController::class, 'Detail']);
 Route::get('admin-product/{productid}',[ProductController::class, 'DeleteProduct']) ->name('delete');
+
+
+
+//Update User
+Route::get('admin-blank','UserController@getAllUser') -> name('admin-blank');
+Route::post('admin-blank','UserController@updateUser') ->name('UpdateUser');
+
+
+Route::get('UpdateUser/{username}','UserController@getUpdateUser') -> name('UU');
+Route::post('UpdateUser/{username}','UserController@updateUser');

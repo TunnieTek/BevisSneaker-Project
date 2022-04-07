@@ -1,5 +1,4 @@
 @include('admin.admin-header')
-@yield('tables')
  <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -30,22 +29,6 @@
                                             <th>Function</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        @foreach ($user as $key => $value)
-                                        <tr>
-                                            <td>{{ $key + 1}}</td>
-                                            <td>{{ $value -> username}}</td>
-                                            <td>{{ $value -> password}}</td>
-                                            <td>{{ $value -> fullname}}</td>
-                                            <td>{{ $value -> phonenumber}}</td>
-                                            <td>{{ $value -> email}}</td>
-                                            <td>{{ $value -> address}}</td>
-                                            <td>{{ $value -> city}}</td>
-                                            <th><a href="{{route('deleteUser',$value->username)}}">Delete</a></th>
-                                            <th><a href="{{route('UU',$value->username)}}">Update</a></th>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
                                     <tfoot>
                                         <tr>
                                             <th>#</th>
@@ -56,12 +39,29 @@
                                             <th>Email</th>
                                             <th>Address</th>
                                             <th>City</th>
+                                            <th>Function</th>
                                         </tr>
                                     </tfoot>
+                                    <tbody>
+                                        <form action="" method="post">
+                                            @csrf
+                                                <th>#</th>
+                                                <th><input type="text" name="username" value="{{$user->username}}"></th>
+                                                <th><input type="password" name="password" value="{{$user->password}}"></th>
+                                                <th><input type="text" name="fullname" value="{{$user->fullname}}" ></th>
+                                                <th><input type="number" name="phonenumber" min="999991299" value="{{$user->phonenumber}}"></th>
+                                                <th><input type="email" name="email" value="{{$user->email}}"></th>
+                                                <th><input type="text" name="address" value="{{$user->address}}"></th>
+                                                <th><input type="text" name="city" value="{{$user->city}}"></th>
+                                                <th><button type="submit">Update Dum Em</button></th>
+                                            </tr>
+                                        </form>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- /.container-fluid -->
 

@@ -37,7 +37,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    protected $users = 'users';
+    // protected $users = 'users';
+    protected $table = 'users';
+    protected $primaryKey = 'username';
     protected $fillable = ['username','password','email','fullname','phonenumber','address','city'];
     public $timestamps = false;
+    public $incrementing = false;
+    // In Laravel 6.0+ make sure to also set $keyType
+    protected $keyType = 'string';
+
 }
