@@ -14,14 +14,18 @@ class Product extends Migration
     public function up()
     {
         Schema::create('product', function (Blueprint $product) {
-            $product -> string('productid');
+            $product -> increments('productid') ;
             $product -> string('productname');
-            $product -> float('price');
-            $product -> float('size');
-            $product -> string('color');
-            $product -> string('images');
+            $product -> string('price');
             $product -> string('category');
+            $product -> string('color');
+            $product -> string('size');
             $product -> string('description');
+            $product -> string('image');
+            $product -> string('image2');
+            $product -> string('image3');
+            $product -> string('image4');
+            $product -> string('image5');
         });
     }
 

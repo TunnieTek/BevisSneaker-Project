@@ -25,4 +25,25 @@ class AdminController extends Controller
     {
         return view('admin.admin-product');
     }
+
+    public function postLoginAdmin(Request $request)
+    {
+        $data = request()->all();
+        if (Auth::attempt(['username' => $data['username'], 'password' => $data['password']])) {
+                // $user = Auth::User();
+                // Session::put('user', $user);
+                // $user=Session::get('user');
+                // return $user->name;
+            $alertsc='Logged Successfully!';
+            return redirect()->route('admin')->with('alertsc',$alertsc);
+        } else {
+            $alerter='Username or Password Incorrect';
+            return redirect()->back()->with('alerter',$alerter);
+        }
+
+
+    }
+
+    
+
 }

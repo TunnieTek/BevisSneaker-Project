@@ -44,6 +44,13 @@ class ProductController extends Controller
         return redirect()->route('database');
     }
 
+    public function DeleteProduct($productid)
+    {
+        $product = Product::find($productid);
+        $product->delete();
+        return back();
+    }
+
     public function Detail($productid)
     {
         $data = Product::find($productid);
@@ -51,12 +58,6 @@ class ProductController extends Controller
 
     }
 
-    public function DeleteProduct($productid)
-    {
-        $product = Product::find($productid);
-        $product->delete();
-        return back();
-    }
 
 
     public function updateProduct(Request $request, $productid)

@@ -37,13 +37,32 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // protected $users = 'users';
-    protected $table = 'users';
-    protected $primaryKey = 'username';
-    protected $fillable = ['username','password','email','fullname','phonenumber','address','city'];
-    public $timestamps = false;
-    public $incrementing = false;
-    // In Laravel 6.0+ make sure to also set $keyType
-    protected $keyType = 'string';
+    public function cart()
+    {
+        return $this->hasMany(Cart::class);
+    }
 
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    protected $table = 'user';
+    protected $fillable = [
+        'username',
+        'password',
+        'role',
+        'email',
+        'firstname',
+        'lastname',
+        'address',
+        'phone',
+        'status',
+        'created_at',
+        'updated_at',
+    ];
+    protected $primaryKey = 'username';
+    public $incrementing = false;
+    public $timestamps = false;
+    protected $connection = 'user';
 }
