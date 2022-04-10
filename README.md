@@ -7,7 +7,7 @@
 </p>
 
 ### Project initiating member: **Quach Cong Tuan** 
-### Contributing members: **Tran Anh Van** 
+### Contributing members: **Tran Anh Van** & **Pham Van Long**
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 ** **
 We developed on Laravel PHP - MySQL platform
