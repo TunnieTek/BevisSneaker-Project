@@ -47,7 +47,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="database">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span>
+                    <span>Create Product</span>
                 </a>
             </li>
 

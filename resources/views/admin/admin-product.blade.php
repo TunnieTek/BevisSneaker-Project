@@ -26,28 +26,32 @@
                                             <th>Images</th>
                                             <th>Category</th>
                                             <th>Description</th>
-                                            <th>Images2</th>
-                                            <th>Images3</th>
-                                            <th>Images4</th>
-                                            <th>Images5</th>
                                             <th>Function</th>
                                         </tr>
                                     </thead>
+
+                                    <style type="text/css">
+                                        .hoveritem:hover
+                                        {
+                                            background-color: #cececea1;
+                                            color: #20212a;
+                                        }
+                                    </style>
                                     <tbody>
-                                        @foreach ( $product as $key => $value )
-                                        <tr>
+                                        @foreach ( $product as $key => $value)
+                                        <tr class="hoveritem">
                                             <th>{{ $value -> productid}}</th>
                                             <th>{{ $value -> productname}}</th>
                                             <th>{{ $value -> price}}</th>
-                                            <th>{{ $value -> color}}</th>
-                                            <th>{{ $value -> image}}</th>
-                                            <th>{{ $value -> category}}</th>
-                                            <th>{{ $value -> description}}</th>
-                                            <th>{{ $value -> image2}}</th>
-                                            <th>{{ $value -> image3}}</th>
-                                            <th>{{ $value -> image4}}</th>
-                                            <th>{{ $value -> image5}}</th>
                                             <th>
+                                                {{{ $value -> color }}}
+                                            </th>
+                                            <th>{{ $value -> image}} <br> {{ $value -> image2}} <br> {{ $value -> image3}} <br> {{ $value -> image4}} <br> {{ $value -> image5}}</th>
+                                            <th>
+                                                {{{ $value -> category }}}
+                                            </th>
+                                            <th  style="width: 45%">{{ $value -> description}}</th>
+                                            <th  style="width: 15%">
                                                 <a href="{{route('delete',$value->productid)}}" class="btn btn-danger">Delete</a>
                                                 <a href="{{route('UP',$value->productid)}}" class="btn btn-success">Update</a>
                                             </th>

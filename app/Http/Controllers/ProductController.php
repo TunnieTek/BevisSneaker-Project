@@ -25,9 +25,22 @@ class ProductController extends Controller
 
     public function getAllAdminProduct()
     {
-        $product = Product::All();
-        $product = DB::table('product')->get();
-        return view('admin.admin-product', compact("product"));
+
+
+
+        // $product = DB::table('category','color')
+        //     ->join('product', 'product.category', '=', 'category.categoryid')
+        //     ->select('product.*','category.category')
+        //     ->get();
+
+        $product = DB::table('product')
+            ->join('category', 'product.category', '=', 'category.categoryid')
+            ->join('color', 'product.color', '=', 'color.colorid')
+            ->select('product.*','category.category','color.color')
+            ->get();
+
+        // $product = DB::table('product')->get();
+        return view('admin.admin-product', ['product' => $product]);
     }
 
     public function addProduct(Request $request)
