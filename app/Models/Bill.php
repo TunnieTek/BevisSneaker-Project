@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    protected $table = 'order';
-    protected $fillable = ['orderid', 'date','total'];
+    protected $table = 'bill';
+    protected $fillable = ['orderid','cart','purchasedate','total'];
     protected $primaryKey = 'orderid';
     public $timestamps = false;
-    protected $connection = 'order';
+    // protected $connection = 'order';
 
     public function cart()
     {

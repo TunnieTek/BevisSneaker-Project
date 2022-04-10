@@ -19,12 +19,10 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
                                             <th>ID Product</th>
                                             <th>Name</th>
                                             <th>Price</th>
                                             <th>Color</th>
-                                            <th>Size</th>
                                             <th>Images</th>
                                             <th>Category</th>
                                             <th>Description</th>
@@ -38,24 +36,20 @@
                                     <tbody>
                                         @foreach ( $product as $key => $value )
                                         <tr>
-                                            <th>{{ $key + 1}}</th>
                                             <th>{{ $value -> productid}}</th>
                                             <th>{{ $value -> productname}}</th>
                                             <th>{{ $value -> price}}</th>
-                                            {{-- <th>{{ $value -> size}}</th> --}}
                                             <th>{{ $value -> color}}</th>
-                                            <th>{{ $value -> size}}</th>
-                                            <th>{{ $value -> images}}</th>
+                                            <th>{{ $value -> image}}</th>
                                             <th>{{ $value -> category}}</th>
                                             <th>{{ $value -> description}}</th>
-                                            <th>{{ $value -> images2}}</th>
-                                            <th>{{ $value -> images3}}</th>
-                                            <th>{{ $value -> images4}}</th>
-                                            <th>{{ $value -> images5}}</th>
+                                            <th>{{ $value -> image2}}</th>
+                                            <th>{{ $value -> image3}}</th>
+                                            <th>{{ $value -> image4}}</th>
+                                            <th>{{ $value -> image5}}</th>
                                             <th>
-                                                <a href="{{route('delete',$value->productid)}}"><button style="width: 8rem" class="btn btn-danger">Delete</button></a>
-                                                <br>
-                                                <a href="{{route('UP',$value->productid)}}"><button style="width: 8rem" class="btn btn-success">Update</button></a>
+                                                <a href="{{route('delete',$value->productid)}}" class="btn btn-danger">Delete</a>
+                                                <a href="{{route('UP',$value->productid)}}" class="btn btn-success">Update</a>
                                             </th>
                                         </tr>
                                         @endforeach

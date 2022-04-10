@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Role extends Migration
+class Bill extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class Role extends Migration
      */
     public function up()
     {
-        Schema::create('role', function (Blueprint $table) {
-            $table->increments('roleid');
-            $table->string('rolename');
-            $table->string('roledescription');
+        Schema::create('order', function (Blueprint $table) {
+            $table->increments('orderid');
+            $table->integer('cart')->unsigned();
+            $table->date('date');
+            $table->float('total');
+
+            // $table->foreign('cartid')->references('cartid')->on('cart');
         });
     }
 
@@ -27,6 +30,6 @@ class Role extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('orders');
     }
 }

@@ -19,6 +19,6 @@ class Role extends Model
     protected $fillable = ['rolename', 'roledescription'];
     protected $primaryKey = 'rolename';
     public $timestamps = false;
-    protected  $connection = 'role';
+    // protected  $connection = 'role';
 
 }

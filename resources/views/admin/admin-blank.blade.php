@@ -21,7 +21,6 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Username</th>
-                                            <th>Password</th>
                                             <th>Fullname</th>
                                             <th>Phone Number</th>
                                             <th>Email</th>
@@ -35,32 +34,18 @@
                                         <tr>
                                             <td>{{ $key + 1}}</td>
                                             <td>{{ $value -> username}}</td>
-                                            <td>{{ $value -> password}}</td>
                                             <td>{{ $value -> fullname}}</td>
                                             <td>{{ $value -> phonenumber}}</td>
                                             <td>{{ $value -> email}}</td>
                                             <td>{{ $value -> address}}</td>
                                             <td>{{ $value -> city}}</td>
                                             <th>
-                                                <a href="{{route('deleteUser',$value->username)}}"><button style="width: 8rem" class="btn btn-danger">Delete</button></a>
-                                                <br>
-                                                <a href="{{route('UU',$value->username)}}"><button style="width: 8rem" class="btn btn-success">Update</button></a>
+                                                <a href="{{route('deleteUser',$value->username)}}" class="btn btn-danger">Delete</a>
+                                                <a href="{{route('UU',$value->username)}}"class="btn btn-success">Update</a>
                                                 </th>
                                         </tr>
                                         @endforeach
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Username</th>
-                                            <th>Password</th>
-                                            <th>Fullname</th>
-                                            <th>Phone Number</th>
-                                            <th>Email</th>
-                                            <th>Address</th>
-                                            <th>City</th>
-                                        </tr>
-                                    </tfoot>
                                 </table>
                             </div>
                         </div>

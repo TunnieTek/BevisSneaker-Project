@@ -12,8 +12,8 @@ class category extends Model
         return $this->hasMany(Product::Class);
     }
     protected $table = 'category';
-    protected $fillable = ['category', 'catedescription'];
+    protected $fillable = ['category', 'description'];
     protected $primaryKey = 'categoryid';
     public $timestamps = false;
-    protected $connection = 'category';
+    // protected $connection = 'category';
 }

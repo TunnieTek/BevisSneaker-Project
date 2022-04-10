@@ -94,10 +94,9 @@
                                 <div class="row">
                                     @foreach ( $product as $value )
                                     <div class="col-xl-3">
-                                        {{-- @foreach ( $product as $key => $value ) --}}
                                             <div class="single--item--product">
                                                 <div class="img-single-item">
-                                                    <img src="BevisSneaker/images/SingleItem/{{$value ->images}}" style="width: 100%; border-radius: 5px;" >
+                                                    <img src="BevisSneaker/images/SingleItem/{{$value ->image}}" style="width: 100%; border-radius: 5px;" >
                                                 </div>
                                                 <a class="btnBuy" style="text-align: center" href={{"detail/".$value['productid']}}>BUY NOW</a>
                                                 <hr style="border: 1px dashed white;">
@@ -105,15 +104,6 @@
                                                 <hr style="border: 1px dashed white;">
                                                 <h5 style="text-align: center; color: #ff5f17;">${{$value ->price}}</h5>
                                             </div>
-
-                                            {{-- JS --}}
-                                            {{-- <script>
-                                                function buynow()
-                                                {
-                                                    location.assign("detail")
-                                                }
-                                            </script> --}}
-                                            {{-- JS --}}
                                     </div>
                                     @endforeach
                                 </div>

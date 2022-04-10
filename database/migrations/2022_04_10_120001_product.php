@@ -17,15 +17,17 @@ class Product extends Migration
             $product -> increments('productid') ;
             $product -> string('productname');
             $product -> string('price');
-            $product -> string('category');
-            $product -> string('color');
-            $product -> string('size');
+            $product -> integer('category')->unsigned();
+            $product -> integer('color')->unsigned();
             $product -> string('description');
             $product -> string('image');
             $product -> string('image2');
             $product -> string('image3');
             $product -> string('image4');
             $product -> string('image5');
+
+            // $product->foreign('category')->references('categoryid')->on('category');
+            // $product->foreign('color')->references('colorid')->on('color');
         });
     }
 

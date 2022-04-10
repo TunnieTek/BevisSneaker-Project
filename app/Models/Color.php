@@ -15,8 +15,8 @@ class color extends Model
 
     use HasFactory;
     protected $table = 'color';
-    protected $fillable = ['colorname', 'colordescription'];
-    protected $primaryKey = 'colorname';
+    protected $fillable = ['colorid','color','description'];
+    protected $primaryKey = 'colorid';
     public $timestamps = false;
-    protected $connection = 'color';
+    // protected $connection = 'color';
 }

@@ -16,35 +16,59 @@
                             <div class="table-responsive">
                                 <div class="form-product">
                                     <ul style="list-style: none">
-                                        <form action="" method="post">
+                                        <form action="" method="post" class="row g-3">
                                             @csrf
-                                            <li>ID Product</li>
-                                            <li><input type="text" name="productid" value="{{$product->productid}}"></li>
-                                            <li>Name</li>
-                                            <li><input type="text" name="productname" value="{{$product->productname}}"></li>
-                                            <li>Price</li>
-                                            <li><input type="number" min="0" value="10" name="price" value="{{$product->price}}"></li>
-                                            <li>Color</li>
-                                            <li><input type="text" name="color" value="{{$product->color}}"></li>
-                                            <li>Size</li>
-                                            <li><input type="number" value="35" min="35" max="43" name="size" value="{{$product->size}}"></li>
-                                            <li>Images</li>
-                                            <li><input type="file" name="images" value="{{$product->images}}" multiple></li>
-                                            <li>Category</li>
-                                            <li><input type="text" name="category" value="{{$product->category}}" ></li>
-                                            <li>Description</li>
-                                            <li><input type="text" name="description" value="{{$product->description}}" ></li>
-                                            <li>Images-2</li>
-                                            <li><input type="file" name="images2" value="{{$product->images2}}" multiple></li>
-                                            <li>Images-3</li>
-                                            <li><input type="file" name="images3" value="{{$product->images3}}" multiple></li>
-                                            <li>Images-4</li>
-                                            <li><input type="file" name="images4" value="{{$product->images4}}" multiple></li>
-                                            <li>Images-5</li>
-                                            <li><input type="file" name="images5" value="{{$product->images5}}" multiple></li>
-                                            <li>
-                                                <button class="btn btn-success" type="submit">Create</button>
-                                            </li>
+                                                <div class="col-md-4">
+                                                  <label  class="form-label">Product Name</label>
+                                                  <input type="text" class="form-control" name="productname">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Product Price</label>
+                                                    <input type="number" min="300" value="450" class="form-control" name="price">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Color</label>
+                                                      <select  size="3" class="form-select" name="color"  multiple >
+                                                        @foreach ( $color as $item)
+                                                            <option value="{{$item->colorid}}">{{$item->color}}</option>
+                                                        @endforeach
+                                                      </select>
+                                                    </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Category</label>
+                                                    <select size="3" class="form-select" name="category"  multiple >
+                                                        @foreach ( $category as $item)
+                                                            <option value="{{$item->categoryid}}">{{$item->category}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                  </div>
+                                                <div class="col-12">
+                                                  <label class="form-label">Description</label>
+                                                  <input type="text" name="description" class="form-control" id="inputAddress">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Images</label>
+                                                    <input type="file" name="image" id="" multiple>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Images2</label>
+                                                    <input type="file" name="images2" id="" multiple>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Images3</label>
+                                                    <input type="file" name="images3" id="" multiple>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Images4</label>
+                                                    <input type="file" name="images4" id="" multiple>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Images5</label>
+                                                    <input type="file" name="images5" id="" multiple>
+                                                </div>
+                                                <div class="col-12">
+                                                  <button type="submit" class="btn btn-primary">Create</button>
+                                                </div>
                                         </form>
                                     </ul>
                                 </div>

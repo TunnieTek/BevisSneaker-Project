@@ -41,12 +41,13 @@ class loginController extends Controller
     {
         $user = new User;
         $user->username = $request->username;
+        $user->fullname = $request->fullname;
         $user->password = Hash::make($request->password);
         $user->email = $request->email;
-        $user->fullname = $request->fullname;
         $user->phonenumber = $request->phonenumber;
         $user->address = $request->address;
         $user->city = $request->city;
+        $user->role = $value ?? '1';
         $user->save();
         return redirect()->route('login');
     }

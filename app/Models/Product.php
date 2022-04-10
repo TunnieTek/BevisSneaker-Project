@@ -13,31 +13,29 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function size()
-    {
-        return $this->belongsTo(Size::class);
-    }
-
     public function color()
     {
         return $this->belongsTo(Color::class);
     }
 
-    public function cart()
+    public function detail()
     {
-        return $this->hasMany(Cart::class);
+        return $this->belongsToMany(Detail::class);
     }
+
+
 
 
 
     use HasFactory;
     // public $product = 'product';
     public $table = 'product';
-    protected $fillable = ['productid','productname','price','size','color','images','category','description'];
+    protected $fillable = ['productid','productname','price','category','color','description','image','image2','image3','image4','image5'];
     protected $primaryKey = 'productid';
     public $timestamps = false;
     public $incrementing = false;
-    protected $connection = 'product';
+    // protected $connection = 'product';
+
     // In Laravel 6.0+ make sure to also set $keyType
 
 

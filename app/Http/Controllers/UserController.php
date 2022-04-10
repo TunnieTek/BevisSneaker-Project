@@ -7,8 +7,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 
+
+
 class UserController extends Controller
 {
+
+
+
     public function getAllUser()
     {
         $user=user::paginate(10);
@@ -26,12 +31,13 @@ class UserController extends Controller
     {
         $user = User::find($username);
         $user->username = $request->username;
+        $user->fullname = $request->fullname;
         $user->password = Hash::make($request->password);
         $user->email = $request->email;
-        $user->fullname = $request->fullname;
         $user->phonenumber = $request->phonenumber;
         $user->address = $request->address;
         $user->city = $request->city;
+        $user->role = ['1'];
         $user->save();
         return back();
     }

@@ -4,7 +4,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">CUSTOMER TABLES</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Create Product Table</h1>
                     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                         For more information about DataTables, please visit the <a target="_blank"
                             href="https://datatables.net">official DataTables documentation</a>.</p>
@@ -12,41 +12,65 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Database Customer | BEVIS</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Database Product | BEVIS</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <div class="form-product">
                                     <ul style="list-style: none">
-                                        <form action="" method="post">
+                                        <form action="" method="post" class="row g-3">
                                             @csrf
-                                            <li>ID Product</li>
-                                            <li><input type="text" name="productid" id=""></li>
-                                            <li>Name</li>
-                                            <li><input type="text" name="productname" id=""></li>
-                                            <li>Price</li>
-                                            <li><input type="number" min="0" value="10" name="price" id=""></li>
-                                            <li>Color</li>
-                                            <li><input type="text" name="color" id=""></li>
-                                            <li>Size</li>
-                                            <li><input type="number" value="35" min="35" max="43" name="size" id=""></li>
-                                            <li>Images</li>
-                                            <li><input type="file" name="images" id="" multiple></li>
-                                            <li>Category</li>
-                                            <li><input type="text" name="category" id="" ></li>
-                                            <li>Description</li>
-                                            <li><input type="text" name="description" id="" ></li>
-                                            <li>Images-2</li>
-                                            <li><input type="file" name="images2" id="" multiple></li>
-                                            <li>Images-3</li>
-                                            <li><input type="file" name="images3" id="" multiple></li>
-                                            <li>Images-4</li>
-                                            <li><input type="file" name="images4" id="" multiple></li>
-                                            <li>Images-5</li>
-                                            <li><input type="file" name="images5" id="" multiple></li>
-                                            <li>
-                                                <button class="btn btn-success" type="submit">Create</button>
-                                            </li>
+                                                <div class="col-md-4">
+                                                  <label  class="form-label">Product Name</label>
+                                                  <input type="text" class="form-control" name="productname">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Product Price</label>
+                                                    <input type="number" min="300" value="450" class="form-control" name="price">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Color</label>
+                                                      <select  size="3" class="form-select" name="color"  multiple >
+                                                        @foreach ( $color as $item)
+                                                            <option value="{{$item->colorid}}">{{$item->color}}</option>
+                                                        @endforeach
+                                                      </select>
+                                                    </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Category</label>
+                                                    <select size="3" class="form-select" name="category"  multiple >
+                                                        @foreach ( $category as $item)
+                                                            <option value="{{$item->categoryid}}">{{$item->category}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                  </div>
+                                                <div class="col-12">
+                                                  <label class="form-label">Description</label>
+                                                  <input type="text" name="description" class="form-control" id="inputAddress">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Images</label>
+                                                    <input type="file" name="image" id="" multiple>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Images2</label>
+                                                    <input type="file" name="images2" id="" multiple>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Images3</label>
+                                                    <input type="file" name="images3" id="" multiple>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Images4</label>
+                                                    <input type="file" name="images4" id="" multiple>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label  class="form-label">Images5</label>
+                                                    <input type="file" name="images5" id="" multiple>
+                                                </div>
+                                                <div class="col-12">
+                                                  <button type="submit" class="btn btn-primary">Create</button>
+                                                </div>
                                         </form>
                                     </ul>
                                 </div>

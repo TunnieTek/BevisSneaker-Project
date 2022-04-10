@@ -15,9 +15,11 @@ class Cart extends Migration
     {
         Schema::create('cart', function (Blueprint $table) {
             $table->increments('cartid');
-            $table->string('username');
-            $table->integer('productid');
+            $table->integer('username')->unsigned();
+            $table->integer('detailid')->unsigned();
 
+            // $table->foreign('username')->references('username')->on('users');
+            // $table->foreign('detailid')->references('detailid')->on('detail');
         });
     }
 

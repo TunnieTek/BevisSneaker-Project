@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class size extends Model
 {
 
-    public function product()
+    public function detail()
     {
-        return $this->hasMany(Product::class);
+        return $this->belongsToMany(detail::class);
     }
 
     use HasFactory;
@@ -18,5 +18,5 @@ class size extends Model
     protected $fillable = ['sizename', 'sizedescription'];
     protected $primaryKey = 'sizename';
     public $timestamps = false;
-    protected $connection = 'size';
+    // protected $connection = 'size';
 }

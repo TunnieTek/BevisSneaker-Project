@@ -13,20 +13,20 @@ class Cart extends Model
     protected $primaryKey = 'cartid';
     public $timestamps = false;
 
-    public function product()
+    public function detail()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsToMany(Detail::class);
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsToMany(User::class);
     }
 
     public function order()
     {
-        return $this->belongsTo(Order::class);
+        return $this->belongsToMany(Order::class);
     }
 
-    protected $connection = 'cart';
+    // protected $connection = 'cart';
 }

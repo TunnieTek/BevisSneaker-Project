@@ -21,7 +21,8 @@ class Users extends Migration
             $users->string('phonenumber');
             $users->string('address');
             $users->string('city');
-            $users->string('role');
+            $users->integer('role') ->unsigned();
+            // $users->foreign('roleid')->references('roleid')->on('role');
         });
     }
 

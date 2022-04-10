@@ -47,7 +47,7 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
-    protected $table = 'user';
+    protected $table = 'users';
     protected $fillable = [
         'username',
         'password',
@@ -64,5 +64,5 @@ class User extends Authenticatable
     protected $primaryKey = 'username';
     public $incrementing = false;
     public $timestamps = false;
-    protected $connection = 'user';
+    // protected $connection = 'user';
 }
