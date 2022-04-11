@@ -42,7 +42,7 @@
                                         </div>
                                     </th>
                                     <td class="border-0 align-middle"><strong>${{$item->price}}</strong></td>
-                                    <td class="border-0 align-middle"><strong><input type="number" value="1" min="1"></strong></td>
+                                    <td class="border-0 align-middle"><strong><input type="number" value="{{$item->quantity}}" min="1"></strong></td>
                                     <td class="border-0 align-middle"><a href="{{route('DeleteCart',$item->cartid)}}" class="text-dark"><i class="fa fa-trash"></i></a></td>
                                 </tr>
                             @endforeach
@@ -64,24 +64,33 @@
                         </div>
                         </div>
                     </div>
-                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Instructions for seller</div>
-                    <div class="p-4">
-                        <p class="font-italic mb-4">If you have some information for the seller you can leave them in the box below</p>
-                        <textarea name="" cols="30" rows="2" class="form-control"></textarea>
-                    </div>
                     </div>
                     <div class="col-lg-6">
                     <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
                     <div class="p-4">
                         <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
-                        <ul class="list-unstyled mb-4">
-                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$79.00</strong></li>
-                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
-                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
+                        <p>@if (Auth::check())
+                            @if (Auth::user()->role == '2')
+                            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Discount</strong>
+                                <h5 class="font-weight-bold">
+                                    <strong>
+                                        - $100
+                                    </strong>
+                                </h5>
+                            </li>
+                            @else
+                                ${{$total}}
+                            @endif
+
+                        @endif</p>
                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-                            <h5 class="font-weight-bold">$89.00</h5>
+                            <h5 class="font-weight-bold">
+                                <strong>
+                                    ${{$total}}
+                                </strong>
+                            </h5>
                         </li>
-                        </ul><a href="#" class="btn-footer" style="padding: 1.5%; font-family: 'URW Geometric';">PROCCEED TO CHECKOUT</a>
+                        </ul><a type="submit" class="btn-footer" style="padding: 1.5%; font-family: 'URW Geometric'; text-align:center">PROCCEED TO CHECKOUT</a>
                     </div>
                     </div>
                 </div>

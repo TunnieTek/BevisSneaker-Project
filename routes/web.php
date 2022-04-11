@@ -64,9 +64,15 @@ Route::get('admin-product',[AdminController::class, 'getProduct']) -> name('admi
 
 
 
-// // Anypage error
-// Route::get('{any}', 'Error@ErrorPage')
-//     ->where('any', '.*');
+// Anypage error
+Route::get('{{error}}', function () {
+    return view('404');
+});
+
+Route::get('{any}', function () {
+    return view('404');
+});
+
 
 // Logout
 Route::get('logout', 'loginController@logout') -> name('logout');

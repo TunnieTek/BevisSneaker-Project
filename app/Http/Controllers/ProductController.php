@@ -146,8 +146,19 @@ class ProductController extends Controller
             ->where('cart.username', Auth()->user()->username)
             ->get();
 
+        if (Auth()->user()->role == '2') {
+            $voucher = 100;
+            alert('Voucher: ' . $voucher . '%');
+        } else {
+            $voucher = 0;
+        }
 
-        return view('cart', ['cart' => $cart]);
+
+        $total = 0;
+        foreach ($cart as $key => $value) {
+            $total += $value->price * $value->quantity - $voucher;
+        }
+        return view('cart', ['cart' => $cart, 'total' => $total]);
     }
 
     public function DeleteCart($cartid)

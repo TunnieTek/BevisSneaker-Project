@@ -9,13 +9,19 @@ use App\Models\Detail;
 
 class OrderController extends Controller
 {
-    // public function Order(Request $request, $id)
-    // {
-    //     $cart = new Cart;
-    //     $cart->username = $request->username;
-    //     $cart->detail = $request->id;
-    //     $cart->quantity = $request->quantity;
-    //     $cart->save();
-    //     return redirect()->route('cart');
-    // }
+
+
+    public function Bill(Request $request)
+    {
+        $data = new bill;
+        $data->username = Auth()->user()->username;
+        $data->cart = $request->cartid;
+        $data->purchasedate = gettimeofday();
+        $data->total = $request->total;
+        $data->save();
+        $alertor = 'Thank you!
+                    <br>Your order has been placed successfully';
+        return back()->with('alertor', $alertor);
+    }
+
 }
