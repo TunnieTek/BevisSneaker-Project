@@ -10,31 +10,31 @@
 
      </head>
     <body>
+        {{-- @if(session('alertsc'))
+        <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+              <div class="toast-body">
+                {{session('alertsc')}}
+             </div>
+              <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+          </div>
+        @endif --}}
         <!-- START HEADER -->
         <div class="ads">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-1"></div>
                     <div class="col-xl-10">
-                        <a href="{{route('cart')}}"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
-                        <a href="{{route('login')}}">
-                                @if(session('alertsc'))
-                                    {{session('alertsc')}}
-                                @else
-                                    <i class="fa-solid fa-user"></i> Login
+                            @if(Auth::check())
+                                <a href="{{route('logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i> {{Auth::user()->username}}</a>
+                                <a href="{{route('cart')}}"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+                                @if (Auth::user()->role == 2)
+                                    <a href="{{route('admin-product')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Admin Dashboard</a>
                                 @endif
-{{-- MAGIC MAGIC --}}
-                                {{-- @if($user = Auth::User())
-                                {
-                                    @if(session('alertsc'))
-                                        {{session('alertsc')}}
-                                    @endif
-                                }
-                                @else
-                                    <i class="fa-solid fa-user"></i> Login
-                                @endif --}}
-
-                        </a>
+                            @else
+                            <a href="{{route('login')}}"><i class="fa-solid fa-user"></i> Login</a>
+                            @endif
                         <a href="#"><i class="fa-solid fa-heart"></i> Love</a>
                         <a href="#"><i class="fa-solid fa-truck"></i> Tracking</a>
                     </div>
@@ -78,6 +78,7 @@
                 </div>
             </div>
         </header>
+
         {{-- @if(session('alertsc'))
         <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="d-flex">

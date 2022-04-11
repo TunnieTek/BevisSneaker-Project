@@ -6,7 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\listUserController;
-
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,11 +69,7 @@ Route::get('admin-product',[AdminController::class, 'getProduct']) -> name('admi
 //     ->where('any', '.*');
 
 // Logout
-Route::get('logout', function(){
-    Request::session()->flush();
-    return view('login');
-});
-
+Route::get('logout', 'loginController@logout') -> name('logout');
 
 
 
@@ -108,3 +104,12 @@ Route::post('admin-product','ProductController@updateProduct') ->name('UpdatePro
 
 Route::get('UpdateProduct/{productid}','ProductController@getUpdateProduct') -> name('UP');
 Route::post('UpdateProduct/{productid}','ProductController@updateProduct');
+
+
+// Get detail
+Route::GET('detail/{productid','ProductController@getCart') -> name('detail/{productid');
+Route::POST('detail/{productid}','ProductController@getCart') -> name('detail');
+
+// CART ======================================================================================
+Route::get('cart', 'ProductController@getAllCart') ->name('cart');
+Route::get('cart/{id}','ProductController@DeleteCart') ->name('DeleteCart');

@@ -28,8 +28,12 @@ class loginController extends Controller
             $alerter='Username or Password Incorrect';
             return redirect()->back()->with('alerter',$alerter);
         }
+    }
 
-
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login');
     }
 
     public function getSignup()

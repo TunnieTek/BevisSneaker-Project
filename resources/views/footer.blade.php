@@ -114,5 +114,34 @@
         var scrollSpyContentEl = document.getElementById('content')
         var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a Bootstrap scrollspy instance
     </script>
+
+    <script>
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl, option)
+        })
+
+        var myAlert = document.getElementById('myAlert')
+        var bsAlert = new bootstrap.Alert(myAlert)
+        var alertNode = document.querySelector('.alert')
+        var alert = bootstrap.Alert.getInstance(alertNode)
+        alert.close()
+
+        var myAlert = document.getElementById('myAlert')
+        myAlert.addEventListener('closed.bs.alert', function () {
+
+})
+
+toast.show()
+var myToastEl = document.getElementById('myToastEl')
+var myToast = bootstrap.Toast.getInstance(myToastEl) // Returns a Bootstrap toast instance
+var myToastEl = document.getElementById('myToastEl')
+var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Returns a Bootstrap toast instance
+toast.dispose()
+var myToastEl = document.getElementById('myToast')
+myToastEl.addEventListener('hidden.bs.toast', function () {
+  // do something...
+})
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>

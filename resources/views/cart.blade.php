@@ -27,22 +27,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <th scope="row" class="border-0">
-                                <div class="p-2">
-                                <img src="{{'BevisSneaker'}}/images/Product-Single/1.png" alt="" width="100" style="margin-right: 2%;" class="img-fluid rounded shadow-sm">
-                                <div class="ml-3 d-inline-block align-middle">
-                                    <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Stant Smith</a></h5>
-                                    <span class="text-muted font-weight-normal font-italic d-block">Category: Sneaker</span>
-                                    <span class="text-muted font-weight-normal font-italic d-block">Color: Red</span>
-                                    <span class="text-muted font-weight-normal font-italic d-block">Size: 38</span>
-                                </div>
-                                </div>
-                            </th>
-                            <td class="border-0 align-middle"><strong>$79.00</strong></td>
-                            <td class="border-0 align-middle"><strong><input type="number" value="1" min="1"></strong></td>
-                            <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
-                            </tr>
+                            @foreach ($cart as $item)
+                                <tr>
+                                    <th scope="row" class="border-0">
+                                        <div class="p-2">
+                                        <img src="{{'BevisSneaker'}}/images/SingleItem/{{$item->image}}" alt="" width="100" style="margin-right: 2%;" class="img-fluid rounded shadow-sm">
+                                            <div class="ml-3 d-inline-block align-middle">
+                                                <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">{{$item->productname}}</a></h5>
+                                                </a></h5>
+                                                <span class="text-muted font-weight-normal font-italic d-block">Size:
+                                                    {{$item->size}}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td class="border-0 align-middle"><strong>${{$item->price}}</strong></td>
+                                    <td class="border-0 align-middle"><strong><input type="number" value="1" min="1"></strong></td>
+                                    <td class="border-0 align-middle"><a href="{{route('DeleteCart',$item->cartid)}}" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                                </tr>
+                            @endforeach
                         </tbody>
                         </table>
                     </div>

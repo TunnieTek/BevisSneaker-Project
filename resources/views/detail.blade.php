@@ -27,7 +27,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="col-xl-3">
@@ -45,6 +44,7 @@
                             <hr style="border: 2px dashed white;">
 
                             <form method="post">
+                                @csrf
                                 <table>
                                     <tr>
                                         <th><h4>COLOR</h4></th>
@@ -52,34 +52,35 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <select name="color" id="">
+                                            <select>
                                                 @foreach ($color as $item)
                                                     <option value="{{$item->color}}">{{$item->color}}</option>
                                                 @endforeach
                                             </select>
                                         </td>
                                         <td>
-                                            <select name="" id="">
-                                                @foreach ($size as $value )
-                                                <option value="{{$value['size']}}">{{$value['size']}}</option>
+                                            <select name="size" id="">
+                                                @foreach ($size as $item )
+                                                    <option value="{{$item->sizeid}}">{{$item->size}}</option>
                                                 @endforeach
                                             </select>
                                         </td>
                                     </tr>
                                 </table>
+                                <hr style="border: 2px dashed white;">
+                                @if (session('alertadd'))
+                                    <div class="alert alert-success">
+                                        {{ session('alertadd') }}
+                                    </div>
+                                @endif
+                                @if(Auth::check())
+                                    <button type="submit" class="btn-footer" style="width: 70%;">ORDER NOW</button>
+                                @else
+                                    <a href="{{route('login')}}" class="btn btn-dark" style="width: 100%;">BUY NOW</a>
+                                @endif
                             </form>
-                            <hr style="border: 2px dashed white;">
-                            <button class="btn-footer" onclick="addCart()">ORDER NOW    </button>
                         </div>
 
-                        {{-- JS --}}
-                        <script>
-                            function addCart()
-                                {
-                                     location.assign("../cart")
-                                }
-                        </script>
-                        {{-- JS --}}
 
                     </div>
                     <div class="col-xl-3"></div>

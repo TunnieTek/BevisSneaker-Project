@@ -5,6 +5,8 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Size;
 use App\Models\Color;
+use App\Models\Cart;
+use App\Models\User;
 use Illuminate\Support\Facades\Response;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
@@ -74,13 +76,13 @@ class ProductController extends Controller
         $size = Size::all();
         $color = DB::table('color')
             ->join('product', 'product.color', '=', 'color.colorid')
-            ->select('color.color')
+            ->select('color.*')
             ->where('product.productid', $productid)
             ->get();
 
         $category = DB::table('category')
             ->join('product', 'product.category', '=', 'category.categoryid')
-            ->select('category.category')
+            ->select('category.*')
             ->where('product.productid', $productid)
             ->get();
 
@@ -89,8 +91,6 @@ class ProductController extends Controller
         // return view('detail',compact('size','color'), ['data' => $data]);
 
     }
-
-
 
     public function updateProduct(Request $request, $productid)
     {
@@ -115,5 +115,49 @@ class ProductController extends Controller
         $data['product'] = Product::find($productid);
         return view('admin.admin-updateProduct',$data);
     }
+
+
+
+    public function getCart(Request $request)
+    {
+        $data = new Cart;
+        $data->username = Auth()->user()->username;
+        $data->product = $request->productid;
+        $data->quantity = $value ?? '1';
+        $data->size = $request->size;
+        $data->save();
+        $alertadd = 'Add to cart successfully!';
+        return back()->with('alertadd', $alertadd);
+    }
+
+    public function getAllCart()
+    {
+        // $product = DB::table('product')
+        //     ->join('category', 'product.category', '=', 'category.categoryid')
+        //     ->join('color', 'product.color', '=', 'color.colorid')
+        //     ->select('product.*','category.category','color.color')
+        //     ->get();
+
+        $cart = DB::table('cart')
+            ->join('product', 'cart.product', '=', 'product.productid')
+            ->join('users', 'cart.username', '=', 'users.username')
+            ->join('size', 'cart.size', '=', 'size.sizeid')
+            ->select('cart.*','product.*','size.size','users.username')
+            ->where('cart.username', Auth()->user()->username)
+            ->get();
+
+
+        return view('cart', ['cart' => $cart]);
+    }
+
+    public function DeleteCart($cartid)
+    {
+        $data = Cart::find($cartid);
+        $data->delete();
+        return back();
+    }
+    // =======================================================================
+
+
 
 }

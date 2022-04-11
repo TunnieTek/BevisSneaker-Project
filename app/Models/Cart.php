@@ -4,12 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Bill;
+use App\Models\Product;
+use App\Models\User;
 
 class Cart extends Model
 {
     use HasFactory;
     protected $table = 'cart';
-    protected $fillable = ['username', 'productid'];
+    protected $fillable = ['cartid','username','product','quantity','size'];
     protected $primaryKey = 'cartid';
     public $timestamps = false;
 
