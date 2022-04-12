@@ -1,5 +1,7 @@
 @include('header')
 @yield('cart')
+<form action="purchase" method="post">
+    @csrf
         <!-- START CART -->
         <div class="cart" style="font-family: 'URW Geometric';">
             <div class="pb-5">
@@ -74,28 +76,30 @@
                             <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Discount</strong>
                                 <h5 class="font-weight-bold">
                                     <strong>
-                                        - $100
+
                                     </strong>
                                 </h5>
                             </li>
                             @else
-                                ${{$total}}
                             @endif
 
                         @endif</p>
                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                             <h5 class="font-weight-bold">
                                 <strong>
-                                    ${{$total}}
+                                    <input value="${{$total}}" name="total">
                                 </strong>
                             </h5>
                         </li>
-                        </ul><a type="submit" class="btn-footer" style="padding: 1.5%; font-family: 'URW Geometric'; text-align:center">PROCCEED TO CHECKOUT</a>
+                        </ul>
+                        <button class="btn-footer" type="submit">PROCCEED TO CHECKOUT</button>
+                        {{-- <a type="submit" class="btn-footer" style="padding: 1.5%; font-family: 'URW Geometric'; text-align:center">PROCCEED TO CHECKOUT</a> --}}
                     </div>
                     </div>
                 </div>
                 </div>
             </div>
         </div>
+        </form>
         <!-- END CART -->
 @include('footer')
