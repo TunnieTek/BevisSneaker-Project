@@ -29,19 +29,15 @@
                                                 <div class="col-md-2">
                                                     <label  class="form-label">Color</label>
                                                       <select  size="3" class="form-select" name="color"  multiple >
-                                                        @foreach ( $color as $item)
-                                                            <option value="{{$item->colorid}}">{{$item->color}}</option>
-                                                        @endforeach
+
                                                       </select>
                                                     </div>
                                                 <div class="col-md-2">
                                                     <label  class="form-label">Category</label>
                                                     <select size="3" class="form-select" name="category"  multiple >
-                                                        @foreach ( $category as $item)
-                                                            <option value="{{$item->categoryid}}">{{$item->category}}</option>
-                                                        @endforeach
+
                                                     </select>
-                                                  </div>
+                                                </div>
                                                 <div class="col-12">
                                                   <label class="form-label">Description</label>
                                                   <input type="text" name="description" class="form-control" id="inputAddress">

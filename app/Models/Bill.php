@@ -18,3 +18,5 @@ class Bill extends Model
         return $this->hasMany(Cart::class);
     }
 }
+
+

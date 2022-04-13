@@ -112,7 +112,7 @@
                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                             <h5 class="font-weight-bold">
                                 <strong>
-                                    <input value="${{$total}}" name="total">
+                                    ${{$total}}
                                 </strong>
                             </h5>
                         </li>

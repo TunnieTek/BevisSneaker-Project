@@ -117,10 +117,9 @@ Route::get('cart/{id}','ProductController@DeleteCart') ->name('DeleteCart');
 
 // Order ======================================================================================
 Route::post('purchases', 'OrderController@Bill') ->name('order');
-route::get('purchases', 'OrderController@getAllOrder') ->name('purchases');
+
 
 // NEWS========================================================================================
 Route::get('news', 'NewsController@ShowNews') ->name('news');
 Route::get('admin-news', 'NewsController@formNews') ->name('admin-news');
 Route::post('admin-news', 'NewsController@CreateNews') ->name('postnews');
-
