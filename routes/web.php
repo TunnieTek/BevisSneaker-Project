@@ -109,5 +109,7 @@ Route::post('purchase', 'OrderController@Bill') ->name('purchase');
 Route::get('purchase', 'OrderController@getBill') ->name('purchase');
 
 
-
+Route::get('news', 'NewsController@ShowNews') ->name('news');
+Route::get('admin-news', 'NewsController@formNews') ->name('admin-news');
+Route::post('admin-news', 'NewsController@CreateNews') ->name('postnews');
 
