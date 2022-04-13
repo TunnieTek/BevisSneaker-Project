@@ -146,8 +146,6 @@ class ProductController extends Controller
         {
             $voucher = 100;
         }
-
-
         $total = 0;
         foreach ($cart as $key => $value) {
             $total += ($value->price * $value->quantity) ;
@@ -155,6 +153,7 @@ class ProductController extends Controller
         $total -=  $voucher;
         return view('cart', ['cart' => $cart, 'total' => $total]);
     }
+
 
     public function DeleteCart($cartid)
     {

@@ -1,21 +1,21 @@
-<<<<<<< HEAD
-
 @include('header')
 @yield('purchase')
 @section('title', 'Purchased')
         <!-- PRODUCT DETAIL -->
         @yield('CHECKOUT')
+        @foreach ($bill as $item)
         <div class="cart" style="font-family: 'URW Geometric';">
-            <h1 style="text-align: center">ORDER #</h1>
+            <h1 style="text-align: center">ORDER #1000{{$item->orderid}}</h1>
             <div class="pb-5">
                 <div class="container">
                 <div class="row">
                     <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
          <!-- Shopping cart table -->
-            <p>Username: </p>
-            <p>Date: </p>
-            <p>Address: </p>
-            <p>Phone: </p>
+
+            <p>Username: {{$item->fullname}} </p>
+            <p>Date: {{$item->purchasedate}}</p>
+            <p>Address:{{$item->address}} </p>
+            <p>Phone: {{$item->phonenumber}}</p>
          <div class="table-responsive">
             <table class="table">
             <thead>
@@ -32,6 +32,9 @@
                 <th scope="col" class="border-0 bg-light">
                     <div class="py-2 text-uppercase">Quantity</div>
                 </th>
+                <th scope="col" class="border-0 bg-light">
+                    <div class="py-2 text-uppercase">Status</div>
+                </th>
                 </tr>
             </thead>
             <tbody>
@@ -39,7 +42,7 @@
                     <tr>
                         <th scope="row" class="border-0">
                             <div class="p-2">
-                            <img src="{{'BevisSneaker'}}/images/SingleItem/" alt="" width="100" style="margin-right: 2%;" class="img-fluid rounded shadow-sm">
+                            <img src="{{'BevisSneaker'}}/images/SingleItem/{{$item->image}}" alt="" width="100" style="margin-right: 2%;" class="img-fluid rounded shadow-sm">
                                 <div class="ml-3 d-inline-block align-middle">
                                     <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle"></a></h5>
                                     </a></h5>
@@ -49,13 +52,16 @@
                                 </div>
                             </div>
                         </th>
-                        <td class="border-0 align-middle"><strong></strong></td>
-                        <td class="border-0 align-middle"><strong><input type="number" value="" min="1"></strong></td>
+                        <td class="border-0 align-middle"><strong>{{$item->productname}}</strong></td>
+                        <td class="border-0 align-middle"><strong>{{$item->price}}</strong></td>
+                        <td class="border-0 align-middle"><strong><input type="number" value="{{$item->quantity}}" min="1"></strong></td>
+                        <td class="border-0 align-middle"><strong style="color: orange">Pending Payment</strong></td>
                     </tr>
                 {{-- @endforeach --}}
             </tbody>
             </table>
         </div>
+        @endforeach
         <!-- End -->
         </div>
     </div>
@@ -80,7 +86,7 @@
             <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                 <h5 class="font-weight-bold">
                     <strong>
-                        {{-- $<input value="{{$total}}" name="total"> --}}
+                        ${{$item->total}}
                     </strong>
                 </h5>
             </li>
@@ -94,25 +100,3 @@
 </div>
 </div>
 @include('footer')
-=======
-@include('header')
-@yield('order')
-
-@section('title', 'Purchased')
-        <!-- PRODUCT DETAIL -->
-        @yield('error')
-        <div class="n404">
-            <div class="container-fluid">
-                <div class="row">
-                    <h1>THANK YOU</h1>
-                    <h2>Your order has been placed successfully</h2>
-                    <h3>
-                        <a href="product" class="btn btn-dark">RETURN HOMEPAGE</a>
-                    </h3>
-                </div>
-            </div>
-        </div>
-@include('footer')
-
-
->>>>>>> 6de80a2918e8900db46975cf5ce6e85663aa2960

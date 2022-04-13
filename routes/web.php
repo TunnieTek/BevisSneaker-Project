@@ -111,13 +111,14 @@ Route::GET('detail/{productid','ProductController@getCart') -> name('detail/{pro
 Route::POST('detail/{productid}','ProductController@getCart') -> name('detail');
 
 // CART ======================================================================================
-Route::get('cart', 'ProductController@getAllCart') ->name('cart');
+Route::get('/cart', 'ProductController@getAllCart') ->name('cart');
 Route::get('cart/{id}','ProductController@DeleteCart') ->name('DeleteCart');
 
 
 // Order ======================================================================================
-Route::post('purchases', 'OrderController@Bill') ->name('order');
-
+Route::post('/cart', 'OrderController@Bill') ->name('order');
+Route::get('/purchase', 'OrderController@showBill') ->name('purchase');
+Route::get('manage-order', 'OrderController@showAdminBill') ->name('manage-order');
 
 // NEWS========================================================================================
 Route::get('news', 'NewsController@ShowNews') ->name('news');

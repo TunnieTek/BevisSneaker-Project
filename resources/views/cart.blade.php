@@ -29,8 +29,6 @@
                             </tr>
                         </thead>
                         <tbody>
-        <form action="" method="post">
-            @csrf
                             @foreach ($cart as $item)
                                 <tr>
                                     <th scope="row" class="border-0">
@@ -58,19 +56,15 @@
                 </div>
                 <div class="row py-5 p-4 bg-white rounded shadow-sm">
                     <div class="col-lg-6">
-                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">STATUS</div>
                     <div class="p-4">
-                        <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
-                        <div class="input-group mb-4 border rounded-pill p-2">
-                        <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
-                        <div class="input-group-append border-0">
-                            <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i> Apply coupon</button>
-                        </div>
-                        </div>
+                        @if(session('alertor'))
+                            <section class='alert alert-success'>{{session('alertor')}}</section>
+                        @endif
                     </div>
                     </div>
                     <div class="col-lg-6">
-                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">ORDER SUMARY</div>
                     <div class="p-4">
                         <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
                         <p>@if (Auth::check())
@@ -109,6 +103,7 @@
                             @endif
 
                         @endif</p>
+
                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
                             <h5 class="font-weight-bold">
                                 <strong>
@@ -117,14 +112,17 @@
                             </h5>
                         </li>
                         </ul>
-                        <button class="btn-footer" type="submit">PROCCEED TO CHECKOUT</button>
+                        <form action="" method="POST">
+                            @csrf
+                                <input type="hidden" name="total" id="total" value="{{$total}}">
+                            <button class="btn-footer" type="submit">PROCCEED TO CHECKOUT</button>
                         {{-- <a type="submit" class="btn-footer" style="padding: 1.5%; font-family: 'URW Geometric'; text-align:center">PROCCEED TO CHECKOUT</a> --}}
+                        </form>
                     </div>
                     </div>
                 </div>
                 </div>
             </div>
         </div>
-        </form>
         <!-- END CART -->
 @include('footer')
