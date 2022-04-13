@@ -20,3 +20,5 @@ class color extends Model
     public $timestamps = false;
     // protected $connection = 'color';
 }
+
+

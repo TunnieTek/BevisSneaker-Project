@@ -17,7 +17,6 @@ class AdminController extends Controller
 
     public function getTable()
     {
-
         $category = Category::all();
         $color = Color::all();
         return view('admin.admin-table', compact('category', 'color'));

@@ -58,7 +58,7 @@
                                     <li class="line"></li>
                                     <li><a href="{{route('product')}}"><h4>PRODUCT</h4></a></li>
                                     <li class="line"></li>
-                                    <li><a href="#"><h4>FEEDBACK</h4></a></li>
+                                    <li><a href="{{route('news')}}"><h4>NEWS</h4></a></li>
                                     <li class="line"></li>
                                     <li><a href="#"><h4>SALE OFF</h4></a></li>
                                     <li class="line"></li>

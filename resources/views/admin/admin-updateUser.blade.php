@@ -26,6 +26,7 @@
                                             <th>Email</th>
                                             <th>Address</th>
                                             <th>City</th>
+                                            <th>Role</th>
                                             <th>Function</th>
                                         </tr>
                                     </thead>
@@ -39,6 +40,7 @@
                                             <th>Email</th>
                                             <th>Address</th>
                                             <th>City</th>
+                                            <th>Role</th>
                                             <th>Function</th>
                                         </tr>
                                     </tfoot>
@@ -49,10 +51,11 @@
                                                 <th><input type="text" name="username" value="{{$user->username}}"></th>
                                                 <th><input type="password" name="password" value="{{$user->password}}"></th>
                                                 <th><input type="text" name="fullname" value="{{$user->fullname}}" ></th>
-                                                <th><input type="number" name="phonenumber" min="999991299" value="{{$user->phonenumber}}"></th>
+                                                <th><input type="number" name="phonenumber" min="19999129" value="{{$user->phonenumber}}"></th>
                                                 <th><input type="email" name="email" value="{{$user->email}}"></th>
                                                 <th><input type="text" name="address" value="{{$user->address}}"></th>
                                                 <th><input type="text" name="city" value="{{$user->city}}"></th>
+                                                <th><input type="text" name="role" value="{{$user->role}}"></th>
                                                 <th><button type="submit" class="btn btn-success">Update</button></th>
                                             </tr>
                                         </form>

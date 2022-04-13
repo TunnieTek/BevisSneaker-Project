@@ -38,7 +38,7 @@ class loginController extends Controller
 
     public function getSignup()
     {
-        return view('signup');
+        return view('signup');  
     }
 
     public function postSignup(Request $request)

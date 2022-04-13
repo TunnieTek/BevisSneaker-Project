@@ -8,7 +8,7 @@
                         <div class="col-xl-2"></div>
                         <div class="col-xl-8">
                             <marquee direction="left" scrollamount="5" behavior="alternate">
-                                HỆ THỐNG ĐANG BẬN, VUI LÒNG THỬ LẠI SAU
+                                WELCOME BEVIS SNEAKERS
                             </marquee>
                         </div>
                         <div class="col-xl-2"></div>

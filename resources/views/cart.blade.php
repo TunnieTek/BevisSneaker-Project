@@ -1,5 +1,7 @@
 @include('header')
 @yield('cart')
+{{-- <form action="purchase" method="post">
+    @csrf --}}
         <!-- START CART -->
         <div class="cart" style="font-family: 'URW Geometric';">
             <div class="pb-5">
@@ -27,6 +29,8 @@
                             </tr>
                         </thead>
                         <tbody>
+        <form action="" method="post">
+            @csrf
                             @foreach ($cart as $item)
                                 <tr>
                                     <th scope="row" class="border-0">
@@ -74,12 +78,34 @@
                             <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Discount</strong>
                                 <h5 class="font-weight-bold">
                                     <strong>
-                                        - $100
+                                        $100
+                                    </strong>
+                                </h5>
+                            </li>
+                            @elseif (Auth::user()->role == '3')
+                            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Discount</strong>
+                                <h5 class="font-weight-bold">
+                                    <strong>
+                                        $10
+                                    </strong>
+                                </h5>
+                            </li>
+                            @elseif(Auth::user()->role == '4')
+                            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Discount</strong>
+                                <h5 class="font-weight-bold">
+                                    <strong>
+                                        $5
                                     </strong>
                                 </h5>
                             </li>
                             @else
-                                ${{$total}}
+                            <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Discount</strong>
+                                <h5 class="font-weight-bold">
+                                    <strong>
+
+                                    </strong>
+                                </h5>
+                            </li>
                             @endif
 
                         @endif</p>
@@ -90,12 +116,15 @@
                                 </strong>
                             </h5>
                         </li>
-                        </ul><a type="submit" class="btn-footer" style="padding: 1.5%; font-family: 'URW Geometric'; text-align:center">PROCCEED TO CHECKOUT</a>
+                        </ul>
+                        <button class="btn-footer" type="submit">PROCCEED TO CHECKOUT</button>
+                        {{-- <a type="submit" class="btn-footer" style="padding: 1.5%; font-family: 'URW Geometric'; text-align:center">PROCCEED TO CHECKOUT</a> --}}
                     </div>
                     </div>
                 </div>
                 </div>
             </div>
         </div>
+        </form>
         <!-- END CART -->
 @include('footer')

@@ -7,6 +7,7 @@ use App\Models\Size;
 use App\Models\Color;
 use App\Models\Cart;
 use App\Models\User;
+Use App\Models\Bill;
 use Illuminate\Support\Facades\Response;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
@@ -28,20 +29,11 @@ class ProductController extends Controller
     public function getAllAdminProduct()
     {
 
-
-
-        // $product = DB::table('category','color')
-        //     ->join('product', 'product.category', '=', 'category.categoryid')
-        //     ->select('product.*','category.category')
-        //     ->get();
-
         $product = DB::table('product')
             ->join('category', 'product.category', '=', 'category.categoryid')
             ->join('color', 'product.color', '=', 'color.colorid')
             ->select('product.*','category.category','color.color')
             ->get();
-
-        // $product = DB::table('product')->get();
         return view('admin.admin-product', ['product' => $product]);
     }
 
@@ -132,12 +124,6 @@ class ProductController extends Controller
 
     public function getAllCart()
     {
-        // $product = DB::table('product')
-        //     ->join('category', 'product.category', '=', 'category.categoryid')
-        //     ->join('color', 'product.color', '=', 'color.colorid')
-        //     ->select('product.*','category.category','color.color')
-        //     ->get();
-
         $cart = DB::table('cart')
             ->join('product', 'cart.product', '=', 'product.productid')
             ->join('users', 'cart.username', '=', 'users.username')
@@ -146,18 +132,27 @@ class ProductController extends Controller
             ->where('cart.username', Auth()->user()->username)
             ->get();
 
-        if (Auth()->user()->role == '2') {
-            $voucher = 100;
-            alert('Voucher: ' . $voucher . '%');
-        } else {
+        if (Auth()->user()->role == '1') {
             $voucher = 0;
+        }
+        elseif(Auth()->user()->role == '4')
+        {
+            $voucher = 5;
+        }
+        elseif(Auth()->user()->role == '3')
+        {
+            $voucher = 10;
+        } else
+        {
+            $voucher = 100;
         }
 
 
         $total = 0;
         foreach ($cart as $key => $value) {
-            $total += $value->price * $value->quantity - $voucher;
+            $total += ($value->price * $value->quantity) ;
         }
+        $total -=  $voucher;
         return view('cart', ['cart' => $cart, 'total' => $total]);
     }
 
@@ -167,8 +162,6 @@ class ProductController extends Controller
         $data->delete();
         return back();
     }
-    // =======================================================================
-
 
 
 }

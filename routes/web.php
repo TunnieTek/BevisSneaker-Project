@@ -7,6 +7,8 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\listUserController;
 use App\Http\Controllers\OrderController;
+use App\Models\Bill;
+use App\Http\Controllers\NewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,34 +24,29 @@ Route::get('/', function () {
     return view('master');
 });
 
-// Route::get('index',[
-//     'as'=>'homepage',
-//     'user'=>'PageController@getIndex'
-// ]);
+Route::get('purchase', function () {
+    return view('purchase');
+});
+
+
+Route::get('news', function () {
+    return view('news');
+});
+
 
 Route::get('index',[PageController::class, 'getIndex']) -> name('index');
 Route::get('product',[PageController::class, 'getProduct'])  -> name('product');
-// Route::get('detail',[PageController::class, 'getProductDetail'])  -> name('detail');
 Route::get('cart',[PageController::class, 'getCart']) -> name('cart');
 
-// Route::get('login',[loginController::class, 'Login']);
-
-// Route::get('contact',[PageController::class, 'contact']) -> name('contact');
-
 // list all user
-// Route::get('user', [UserController::class, 'getAllUser'])->name('user');
 Route::get('user', 'UserController@getAllUser') ->name('user');
-
 
 // Delete User
 Route::get('admin-blank/{username}',[UserController::class, 'getDeleteUser']) ->name('deleteUser');
 
-
 // LOGIN/SIGNUP
 Route::get('login', 'loginController@getLogin') -> name('login');;
 Route::post('login', 'loginController@postLogin');
-
-
 
 Route::get('signup','loginController@getSignup') -> name('signup');
 Route::post('signup','loginController@postSignup');
@@ -63,16 +60,14 @@ Route::get('database',[AdminController::class, 'getTable']);
 Route::get('admin-product',[AdminController::class, 'getProduct']) -> name('admin-product');
 
 
-
 // Anypage error
 Route::get('{{error}}', function () {
     return view('404');
 });
 
-Route::get('{any}', function () {
-    return view('404');
-});
-
+// Route::get('{any}', function () {
+//     return view('404');
+// });
 
 // Logout
 Route::get('logout', 'loginController@logout') -> name('logout');
@@ -80,15 +75,14 @@ Route::get('logout', 'loginController@logout') -> name('logout');
 
 
 // PRODUCT ================================================================================
-// Route::get('/product', 'ProductController@getAllProduct') ->name('product');
-// Route::get('product',[ProductController::class, 'getAllProduct']);
+
 
 Route::get('product', 'ProductController@getAllProduct') ->name('product');
 Route::get('admin-product', 'ProductController@getAllAdminProduct') ->name('admin-product');
 
 Route::post('database','ProductController@addProduct') ->name('database');
 
-// Route::get('detail/{productid}','ProductController@Detail')  -> name('detail');
+
 Route::get('detail/{productid}',[ProductController::class, 'Detail']);
 Route::get('admin-product/{productid}',[ProductController::class, 'DeleteProduct']) ->name('delete');
 
@@ -119,3 +113,14 @@ Route::POST('detail/{productid}','ProductController@getCart') -> name('detail');
 // CART ======================================================================================
 Route::get('cart', 'ProductController@getAllCart') ->name('cart');
 Route::get('cart/{id}','ProductController@DeleteCart') ->name('DeleteCart');
+
+
+// Order ======================================================================================
+Route::post('purchases', 'OrderController@Bill') ->name('order');
+route::get('purchases', 'OrderController@getAllOrder') ->name('purchases');
+
+// NEWS========================================================================================
+Route::get('news', 'NewsController@ShowNews') ->name('news');
+Route::get('admin-news', 'NewsController@formNews') ->name('admin-news');
+Route::post('admin-news', 'NewsController@CreateNews') ->name('postnews');
+

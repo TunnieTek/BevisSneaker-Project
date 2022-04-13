@@ -26,6 +26,7 @@
                                             <th>Email</th>
                                             <th>Address</th>
                                             <th>City</th>
+                                            <th>Role</th>
                                             <th>Function</th>
                                         </tr>
                                     </thead>
@@ -39,6 +40,7 @@
                                             <td>{{ $value -> email}}</td>
                                             <td>{{ $value -> address}}</td>
                                             <td>{{ $value -> city}}</td>
+                                            <td>{{ $value -> role}}</td>
                                             <th>
                                                 <a href="{{route('deleteUser',$value->username)}}" class="btn btn-danger">Delete</a>
                                                 <a href="{{route('UU',$value->username)}}"class="btn btn-success">Update</a>

@@ -28,7 +28,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index">
                 <div class="sidebar-brand-text mx-3">TRAVATRIX</div>
             </a>
 
@@ -41,6 +41,11 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+            {{-- <li class="nav-item active">
+                <a class="nav-link"href="{{route('admin-news')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>News</span></a>
+            </li> --}}
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Nav Item - Tables -->
@@ -48,6 +53,15 @@
                 <a class="nav-link" href="database">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Create Product</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin-news')}}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>News</span>
                 </a>
             </li>
 
