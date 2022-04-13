@@ -72,4 +72,11 @@ class OrderController extends Controller
         return view('admin.manage-order', ['bill' => $bill]);
     }
 
+    public function DeleteCartBill($cartid)
+    {
+        $data = Cart::find($cartid);
+        $data->delete();
+        return view('master');
+    }
+
 }

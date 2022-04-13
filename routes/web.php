@@ -120,6 +120,9 @@ Route::post('/cart', 'OrderController@Bill') ->name('order');
 Route::get('/purchase', 'OrderController@showBill') ->name('purchase');
 Route::get('manage-order', 'OrderController@showAdminBill') ->name('manage-order');
 
+
+Route::get('/cart/delete/{id}','OrderController@DeleteCartBill') ->name('DeleteCartBill');
+
 // NEWS========================================================================================
 Route::get('news', 'NewsController@ShowNews') ->name('news');
 Route::get('admin-news', 'NewsController@formNews') ->name('admin-news');

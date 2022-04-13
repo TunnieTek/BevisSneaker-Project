@@ -61,7 +61,7 @@
             </tbody>
             </table>
         </div>
-        @endforeach
+
         <!-- End -->
         </div>
     </div>
@@ -71,11 +71,11 @@
         <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Payment</div>
         <div class="p-4">
             <p class="font-italic mb-4">Please choose method payment</p>
-            <div class="form-check form-switch">
-                {{-- https://me.momo.vn/qr-page/P2P/BevidSneaker/8mepZ2o8vLlQbMy --}}
-                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="switches">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Payment with MOMO</label>
-            </div>
+            <p>Banking Transfer: 0217 0406 0203 399</p>
+            <p>Host: Quach Cong Tuan</p>
+            <p>Vietnam International Banking | VIB</p>
+            <strong>Content: <i style="color: red">BV1000{{$item->orderid}}</i></strong>
+
         </div>
         </div>
         <div class="col-lg-6">
@@ -91,10 +91,11 @@
                 </h5>
             </li>
             </ul>
-            <a href="https://me.momo.vn/qr-page/P2P/BevidSneaker/8mepZ2o8vLlQbMy"><button class="btn-footer" type="submit">PROCCEED TO CHECKOUT</button></a>
+            <a href="{{route('DeleteCartBill',$item->cartid)}}"><button class="btn-footer" type="submit">PROCCEED TO CHECKOUT</button></a>
             {{-- <a type="submit" class="btn-footer" style="padding: 1.5%; font-family: 'URW Geometric'; text-align:center">PROCCEED TO CHECKOUT</a> --}}
         </div>
         </div>
+        @endforeach
     </div>
 </div>
 </div>
