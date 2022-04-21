@@ -22,7 +22,7 @@
                                         <form action="" method="post" class="row g-3">
                                             @csrf
                                             <div class="input-group mb-6">
-                                                <span class="input-group-text" id="basic-addon1">Head</span>
+                                                <span class="input-group-text" id="basic-addon1">Heading</span>
                                                 <input type="text" name="heading" class="form-control"   aria-describedby="basic-addon1">
                                             </div>
                                             <div class="input-group mb-6">
