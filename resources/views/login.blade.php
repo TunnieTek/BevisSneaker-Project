@@ -10,7 +10,7 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-xl-6">
-                                        <h1>LOG IN</h1>
+                                        <h1>LOG-IN</h1>
                                         @if(session('alerter'))
                                             <section class='alert alert-danger'>{{session('alerter')}}</section>
                                         @endif
