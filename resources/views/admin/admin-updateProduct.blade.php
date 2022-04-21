@@ -19,7 +19,7 @@
                                         <form action="" method="post" class="row g-3">
                                             @csrf
                                                 <div class="col-md-4">
-                                                  <label  class="form-label">Product Name</label>
+                                                  <label  class="form-label">Product-Name</label>
                                                   <input type="text" class="form-control" name="productname">
                                                 </div>
                                                 <div class="col-md-2">
