@@ -13,7 +13,7 @@
                                         <img src="{{'BevisSneaker'}}/images/STORE--001.png" alt="">
                                     </div>
                                     <div class="col-xl-6">
-                                        <h1>SIGN UP</h1>
+                                        <h1>Sing-up</h1>
                                         <form class="row g-3" method="POST">
                                             @csrf
                                             <div class="col-md-6">

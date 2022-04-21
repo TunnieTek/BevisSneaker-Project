@@ -18,7 +18,7 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                         
                                             <th>Username</th>
                                             <th>Password</th>
                                             <th>Fullname</th>
@@ -32,7 +32,7 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>#</th>
+                                          
                                             <th>Username</th>
                                             <th>Password</th>
                                             <th>Fullname</th>

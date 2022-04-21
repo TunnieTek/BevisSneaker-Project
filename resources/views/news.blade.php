@@ -17,7 +17,8 @@
             }
          </style>
         <div class="recommend">
-            <h1 style="text-align: center; font-family: 'URW Geometric'; padding: 50px;">- NEWS -</h1>
+            <h1 style="text-align:center; padding:50px;">News</h1>
+           
             @foreach ($news as $value )
             <div class="container-fluid">
                 <div class="row">
