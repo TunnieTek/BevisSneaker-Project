@@ -19,7 +19,7 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>ID Product</th>
+                                            <th>ID-Product</th>
                                             <th>Name</th>
                                             <th>Price</th>
                                             <th>Color</th>
