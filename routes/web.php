@@ -108,8 +108,10 @@ Route::get('cart/{id}','ProductController@DeleteCart') ->name('DeleteCart');
 Route::post('purchase', 'OrderController@Bill') ->name('purchase');
 Route::get('purchase', 'OrderController@getBill') ->name('purchase');
 
-
+// New
 Route::get('news', 'NewsController@ShowNews') ->name('news');
 Route::get('admin-news', 'NewsController@formNews') ->name('admin-news');
 Route::post('admin-news', 'NewsController@CreateNews') ->name('postnews');
+//update News
+
 

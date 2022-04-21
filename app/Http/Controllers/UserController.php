@@ -37,7 +37,7 @@ class UserController extends Controller
         $user->phonenumber = $request->phonenumber;
         $user->address = $request->address;
         $user->city = $request->city;
-        $user->role = ['1'];
+        $user->role =$request->role;
         $user->save();
         return back();
     }
